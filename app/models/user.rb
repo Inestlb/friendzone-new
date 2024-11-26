@@ -18,7 +18,18 @@ class User < ApplicationRecord
   has_many :user_events
   has_many :events, through: :user_events
 
-  
+  # validates :age, presence: true, comparison: { greater_than_or_equal_to: 18 }
+  # validates :friends_age, presence: true, comparison: { greater_than_or_equal_to: 18 }
+  # validates :name, presence: true
+  # validates :language, presence: true
+  # validates :location, presence: true
+  # validates :genre, presence: true
+  # validates :situation, presence: true
+  # validates :avatar, presence: true
+  # validates :photos, presence: true
+  # validates :mood, presence: true
+  # validates :vacation, presence: true
+  # validates :life_choice, presence: true
 
 
   def all_matches
