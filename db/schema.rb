@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_26_140213) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_26_163447) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -64,6 +64,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_26_140213) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "title"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -110,9 +111,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_26_140213) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "age", null: false
-    t.integer "friends_age", null: false
-    t.integer "friends_distance", null: false
+    t.integer "age", default: 0, null: false
+    t.integer "friends_age", default: 0, null: false
+    t.integer "friends_distance", default: 0, null: false
     t.string "name"
     t.string "language"
     t.string "location"
