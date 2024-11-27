@@ -13,7 +13,7 @@ require "open-uri"
 # )
 
 # file = URI.parse("https://img.nrj.fr/VKhMtOHrTXFyq-Kf6jODc-uDgYo=/medias%2F2019%2F02%2Fthe-beatles-picto-rs_5c77f18519960.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
+# event.photo.attach(iro: file, filename: "event_#{event.id}.png", content_type: "image/png")
 # event.save!
 
 # event = Event.create!(
@@ -183,7 +183,7 @@ events_data = [
       title: "Run dans Paris avec RunNation",
       description: "Un footing dynamique avec l’appli de jeux de running Run Nation, où chaque kilomètre parcouru devient une aventure ludique, transformant les rues de Paris en un terrain de jeu interactif pour allier sport et fun.",
       image_url: "https://www2.u-trail.com/wp-content/uploads/2022/01/footig.jpg"
-  }
+  },
   {
     date: DateTime.now + rand(1..15).days,
     price: 6.50,
