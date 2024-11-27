@@ -1,12 +1,16 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: transparent;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.avatar {
+  width: 50px; /* Taille ajustable selon vos besoins */
+  height: 50px; /* Taille ajustable selon vos besoins */
+  border-radius: 50%; /* Rend l'image circulaire */
+  object-fit: cover; /* Pour ajuster le contenu dans le cercle */
+  border: 2px solid #fefbfc; /* Optionnel, ajoute une bordure */
 }
