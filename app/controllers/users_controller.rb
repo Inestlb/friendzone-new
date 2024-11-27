@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all # Récupère tous les utilisateurs dans la base
+    @users = User.where.not(id: current_user) # Récupère tous les utilisateurs dans la base
   end
 
   def new
