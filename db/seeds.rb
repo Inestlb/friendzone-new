@@ -238,7 +238,10 @@ users = [
     language: ["Anglais", "Français"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
   },
   {
     name: "Inès 🇲🇦",
@@ -249,7 +252,11 @@ users = [
     language: ["Arabe", "Français", "Anglais"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
+
   },
 
   {
@@ -261,7 +268,11 @@ users = [
     language: ["Français"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
+
   },
   {
     name: "Sophia 🇮🇹",
@@ -272,7 +283,10 @@ users = [
     language: ["Italien", "Anglais"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    friends_age: 20,
+    life_choice: "Famille",
+    friends_distance: 50
+
   },
   {
     name: "Amir",
@@ -283,7 +297,11 @@ users = [
     language: ["Hindi", "Anglais", "Français"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
+
   },
   {
     name: "Chloé",
@@ -294,7 +312,11 @@ users = [
     language: ["Français", "Espagnol"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
+
   },
   {
     name: "Mateo",
@@ -305,7 +327,11 @@ users = [
     language: ["Espagnol", "Français"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
+
   },
   {
     name: "Yuki",
@@ -316,7 +342,10 @@ users = [
     language: ["Japonais", "Anglais"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
   },
   {
     name: "Lara",
@@ -327,7 +356,10 @@ users = [
     language: ["Français", "Allemand", "Anglais"].join(' '),
     mood: "Skincare avec des amis",
     vacation: "Montagne",
-    life_choice: "Famille"
+    life_choice: "Famille",
+    friends_age: 20,
+    friends_distance: 50
+
   }
 ]
 
