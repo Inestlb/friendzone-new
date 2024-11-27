@@ -183,7 +183,7 @@ events_data = [
       title: "Run dans Paris avec RunNation",
       description: "Un footing dynamique avec l’appli de jeux de running Run Nation, où chaque kilomètre parcouru devient une aventure ludique, transformant les rues de Paris en un terrain de jeu interactif pour allier sport et fun.",
       image_url: "https://www2.u-trail.com/wp-content/uploads/2022/01/footig.jpg"
-  }
+  },
   {
     date: DateTime.now + rand(1..15).days,
     price: 6.50,
@@ -223,3 +223,126 @@ events_data.each do |event_data|
     event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
 end
 puts "Seed terminée avec succès"
+
+puts "Deleting old users..."
+User.destroy_all
+puts "Creating users..."
+
+users = [
+  {
+    name: "Ethan 🇺🇸",
+    email: 'test1@test.test',
+    password: '123456',
+    age: 23,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-9_sb7sms.png",
+    language: ["Anglais", "Français"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Inès 🇲🇦",
+    email: 'test2@test.test',
+    password: '123456',
+    age: 30,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
+    language: ["Arabe", "Français", "Anglais"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+
+  {
+    name: "Lucas 🇫🇷",
+    email: 'test3@test.test',
+    password: '123456',
+    age: 33,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-1_tghfv0.png",
+    language: ["Français"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Sophia 🇮🇹",
+    email: 'test4@test.test',
+    password: '123456',
+    age: 30,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705731/scale-10_ehgcud.png",
+    language: ["Italien", "Anglais"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Amir",
+    email: 'test5@test.test',
+    password: '123456',
+    age: 28,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-6_s1bjnv.png",
+    language: ["Hindi", "Anglais", "Français"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Chloé",
+    email: 'test6@test.test',
+    password: '123456',
+    age: 24,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705729/scale-11_panyul.png",
+    language: ["Français", "Espagnol"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Mateo",
+    email: 'test7@test.test',
+    password: '123456',
+    age: 29,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-2_vtnc6t.png",
+    language: ["Espagnol", "Français"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Yuki",
+    email: 'test8@test.test',
+    password: '123456',
+    age: 31,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
+    language: ["Japonais", "Anglais"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  },
+  {
+    name: "Lara",
+    email: 'test9@test.test',
+    password: '123456',
+    age: 25,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-9_sb7sms.png",
+    language: ["Français", "Allemand", "Anglais"].join(' '),
+    mood: "Skincare avec des amis",
+    vacation: "Montagne",
+    life_choice: "Famille"
+  }
+]
+
+begin
+  users.each do |user|
+    new_user = User.new(user)
+    if new_user.save
+      puts "User #{new_user.name} created successfully!"
+    else
+      puts "Failed to create user: #{new_user.errors.full_messages}"
+    end
+  end
+rescue ActiveSupport::MessageEncryptor::InvalidMessage => e
+  puts "Encryption error: #{e.message}"
+rescue StandardError => e
+  puts "An error occurred: #{e.message}"
+end
+puts "Users successfully created!"
