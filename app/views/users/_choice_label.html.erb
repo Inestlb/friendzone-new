@@ -1,0 +1,13 @@
+<%
+  image_url = case choice
+  when "cosy" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg"
+  when "drink" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
+  when "party_night" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg"
+  when "museum" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
+  end
+%>
+
+
+<div class="choice-label">
+  <img src="<%= image_url %>" alt="<%= choice %>">
+</div>

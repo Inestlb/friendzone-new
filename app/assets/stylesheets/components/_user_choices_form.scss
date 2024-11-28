@@ -1,0 +1,61 @@
+.choices-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.choices-item {
+  flex: 0 0 30%;
+}
+
+.choices-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.choices-selector + label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.choices-selector:checked + label {
+  color: white !important;
+}
+
+
+#snippet_choices_ruby + label {
+  color: #FD1015;
+}
+
+#snippet_choices_ruby:checked + label {
+  background-color: #FD1015;
+  border-color: #FD1015;
+}
+
+
+#snippet_choices_javascript + label {
+  color: #FFC65A;
+}
+
+#snippet_choices_javascript:checked + label {
+  background-color: #FFC65A;
+  border-color: #FFC65A;
+}
+
+
+#snippet_choices_css + label {
+  color: #62DDF5;
+}
+
+#snippet_choices_css:checked + label {
+  background-color: #62DDF5;
+  border-color: #62DDF5;
+}
+
+.choice-label img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  filter: grayscale(1);
+}

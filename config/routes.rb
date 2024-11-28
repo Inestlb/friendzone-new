@@ -3,6 +3,14 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   resources :users, only: [:show, :index, :edit, :update] do
+    member do
+      get :edit_mood
+      put :update_mood
+      get :edit_vacation
+      put :update_vacation
+      get :edit_life_choices
+      put :update_life_choices
+    end
     resources :likes, only: [:create]
   end
   resources :matches, only: [:index, :show] do

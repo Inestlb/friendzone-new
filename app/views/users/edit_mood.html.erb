@@ -1,8 +1,16 @@
  <div class="profile-container">
-    <!-- Question Title -->
-    <br>
-    <h1>Choose Your Mood </h1>
-    <br>
+    <h1>Choose your mood</h1>
+
+    <%= simple_form_for @user, url: update_mood_user_path(@user) do |f| %>
+      <%= f.input :mood,
+        collection: User::MOODS,
+        as: :radio_buttons,
+        collection_wrapper_tag: 'div',
+        collection_wrapper_class: 'choices-wrapper',
+        label_method: lambda { |choice| render 'users/choice_label', choice: choice },
+        item_wrapper_class: 'choices-item',
+        input_html: { class: 'choices-selector' } %>
+    <% end %>
 
     </p>
     <br>
@@ -39,8 +47,3 @@
     <br>
     <br>
   </div>
-
-
-
-
-

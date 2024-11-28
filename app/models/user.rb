@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  MOODS = ["cosy", "drink", "party_night", "museum"]
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
@@ -27,7 +29,7 @@ class User < ApplicationRecord
   # validates :situation, presence: true
   # validates :avatar, presence: true
   # validates :photos, presence: true
-  # validates :mood, presence: true
+  # validates :mood, presence: true, inclusion: { in: MOODS }
   # validates :vacation, presence: true
   # validates :life_choice, presence: true
 
