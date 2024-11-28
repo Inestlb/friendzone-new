@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-  resources :users, only: [:show, :index, :edit, :update] do
-    resources :likes, only: [:create]
-  end
+  resources :users, only: [:show, :index, :edit, :update]
+  
+  resources :likes, only: [:create]
   resources :matches, only: [:index, :show] do
     resources :messages, only: [:create]
   end

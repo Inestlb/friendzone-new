@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_26_163447) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_27_151132) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -111,9 +111,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_26_163447) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "age", default: 0, null: false
-    t.integer "friends_age", default: 0, null: false
-    t.integer "friends_distance", default: 0, null: false
+    t.integer "age", null: false
+    t.integer "friends_age", null: false
+    t.integer "friends_distance", null: false
     t.string "name"
     t.string "language"
     t.string "location"
@@ -121,7 +121,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_26_163447) do
     t.string "friends_genre"
     t.string "friends_language"
     t.string "situation"
-    t.string "avatar"
+    t.string "avatar_url"
     t.string "photos"
     t.string "mood"
     t.string "vacation"

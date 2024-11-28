@@ -1,2 +1,49 @@
-<h1>coucou Léa</h1>
+<div class="swiper" data-controller="swipe coordinates">
+    <div class="swiper__content">
+      <div class="swiper__card-cont">
+        <% @users.each do |user| %>
 
+          <div class="swiper__card"
+               data-swipe-target="card"
+               data-id="<%= user.id %>"
+               data-current="<%= current_user.id %>">
+            <%= link_to 'Profile', user_path(user), class: 'profile-link hidden' %>
+            <div class="swiper__card__content">
+
+              <div class="swiper__card__content_top">
+								<%# La partie du haut de la carte %>
+              </div>
+
+              <% if user.avatar.attached? %>
+                <%= cl_image_tag user.avatar.key, class: 'swiper__card__img' %>
+              <% else %>
+                <%= image_tag "avatar-1.png", class: 'swiper__card__img' %>
+              <% end %>
+
+              <div class="swiper__card__content_bottom">
+                <p class="swiper__card__name">
+                  <strong><%= user.name %></strong>, <span class="profile-age"><%= user.age %></span>
+                </p>
+                <p class="swiper__card__distance">
+                </p>
+              </div>
+
+            </div>
+            <div class="swiper__card__choice m--reject"></div>
+            <div class="swiper__card__choice m--like"></div>
+            <div class="swiper__card__drag"></div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="modal fade" data-swipe-target="modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog success-modal-dialog">
+        <div class="modal-content success-modal-content">
+          <div class="modal-body success-modal-body" data-swipe-target="modalBody">
+						<%# Ici c'est la modale pour notifier que le match a eu lieu, voir controller stimulus %>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
