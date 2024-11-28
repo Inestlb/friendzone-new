@@ -1,147 +1,22 @@
 require "open-uri"
 
-# Event.destroy_all
-
-# events.each do |event|
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 69.0,
-#   location: "Stade de France, 93200 Saint-Denis",
-#   title: "Concert The Beatles",
-#   description: "Un concert légendaire des Beatles au Stade de France, réunissant des milliers de fans dans une ambiance électrique, où les icônes britanniques font revivre leurs classiques intemporels sous un ciel étoilé."
-# )
-
-# file = URI.parse("https://img.nrj.fr/VKhMtOHrTXFyq-Kf6jODc-uDgYo=/medias%2F2019%2F02%2Fthe-beatles-picto-rs_5c77f18519960.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 26.90,
-#   location: "Athena Art Café, 3 rue Claude Chahu Paris 75016",
-#   title: "Café peinture",
-#   description: "Un café peinture chaleureux où créativité et convivialité se rencontrent, invitant les participants à exprimer leur art tout en savourant une boisson réconfortante."
-# )
-
-# file = URI.parse("https://cdn.sortiraparis.com/images/80/62403/736808-drink-paint-un-afterwork-peinture-et-degustation-de-vin-en-compagnie-d-un-e-artiste-a-paris.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 9.90,
-#   location: "59 rue des horizons, 75012 Paris",
-#   title: "Cinéma sur les toits",
-#   description: "Au programme : des classiques intemporels et des pépites du cinéma indépendant, accompagnés de pop-corn artisanal, de cocktails estivaux, et de la douce brise parisienne."
-# )
-
-# file = URI.parse("https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/07/19141426/rooftop-cinema-edit-xlarge-1024x577.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 89.00,
-#   location: "Boulevard du parc, 77700 Coupvray",
-#   title: "Disneyland",
-#   description: "Une journée magique à Disneyland Paris, où attractions, parades féeriques et rencontres avec les personnages emblématiques transportent petits et grands dans un rêve éveillé."
-# )
-
-# file = URI.parse("https://res.cloudinary.com/du5jifpgg/image/upload/t_opengraph_image/Parcours/itin%C3%A9raires/Disneyland-et-alentours/Fetes-de-fin-d-annee-2021-a-disneyland-paris-header.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 23.50,
-#   location: "5 Quai Marcel Dassault - 92150 Suresnes",
-#   title: "Brunch sur une péniche",
-#   description: "Un brunch sur une péniche, mêlant délices gourmands et vue imprenable, où l’on savoure un repas raffiné tout en glissant paisiblement sur la Seine."
-# )
-
-# file = URI.parse("https://uploads.lebonbon.fr/source/2022/november/16172/img-3969-1-_1_2000.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 11.50,
-#   location: "Grand Palais Immersif, 110, rue de Lyon, 75012 Paris",
-#   title: "Exposition PIXELS de Miguel Chevalier",
-#   description: "Le Grand Palais Immersif vous invite à découvrir PIXELS, la première grande exposition parisienne dédiée à Miguel Chevalier, pionnier de l’art numérique. Installée au cœur de la Bastille, cette exposition exceptionnelle, pensée sur deux étages et occupant plus de 1200 m², vous plongera dans un univers où réel et virtuel fusionnent pour repousser les frontières"
-# )
-
-# file = URI.parse("https://grandpalais-immersif.fr/sites/immersif/files/styles/w1920_extra_wide/public/2024-10/GPI_miguelchevalier_affiche_231024.jpg?itok=k7OqlfQc").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 0.0,
-#   location: "Paris",
-#   title: "Run dans Paris avec RunNation",
-#   description: "Un footing dynamique avec l’appli de jeux de running Run Nation, où chaque kilomètre parcouru devient une aventure ludique, transformant les rues de Paris en un terrain de jeu interactif pour allier sport et fun."
-# )
-
-# file = URI.parse("https://www2.u-trail.com/wp-content/uploads/2022/01/footig.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 6.50,
-#   location: "14 rue Crespin du gast, 75011 Paris",
-#   title: "Concours de fléchettes",
-#   description: "Un concours de fléchettes convivial à l’école Le Wagon, organisé entre deux cours de Ruby, où étudiants et passionnés se défient dans une ambiance festive et décontractée, alliant précision et bonne humeur."
-# )
-
-# file = URI.parse("https://upload.wikimedia.org/wikipedia/commons/f/fb/Darts_in_a_dartboard.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-# event = Event.create!(
-#   date: DateTime.now + rand(1..15).days,
-#   price: 19.90,
-#   location: "Pl. de l'Opéra, 75009 Paris",
-#   title: "Escape Game à l'Opéra garnier",
-#   description: "Un escape game palpitant à l'Opéra Garnier, où les participants explorent les mystérieuses coulisses de ce monument emblématique, résolvant énigmes et secrets cachés entre ses murs majestueux."
-# )
-
-# file = URI.parse("https://www.dansesaveclaplume.com/wordpress/wp-content/uploads/inside-opera_home-ok.jpg").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-
-#   date: DateTime.now + rand(1..15).days,
-#   price: 0.0,
-#   location: "Paris",
-#   title: "Regarder un film avec RealMates",
-#   description: "Un événement unique où l'on se réunit pour une soirée cinéma inoubliable grâce à l’appli Reelmates, qui rend le choix du film aussi amusant que la projection elle-même, pour une expérience partagée et sans prise de tête, entre rires, découvertes et émotions."
-# )
-
-# file = URI.parse("https://cdn.paris.fr/qfapv4/2024/07/17/huge-363fb6687bad0dd437a521ac5ab7aace.png").open
-# event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
-# event.save!
-
-#require “open-uri”
-# Réinitialise tous les événements existants
 Event.destroy_all
+
 events_data = [
   {
     date: DateTime.now + rand(1..15).days,
     price: 69.0,
     location: "Stade de France, 93200 Saint-Denis",
     title: "Concert The Beatles",
-    description: "Un concert légendaire des Beatles au Stade de France, réunissant des milliers de fans dans une ambiance électrique, où les icônes britanniques font revivre leurs classiques intemporels sous un ciel étoilé.",
-    image_url: "https://img.nrj.fr/VKhMtOHrTXFyq-Kf6jODc-uDgYo=/medias%2F2019%2F02%2Fthe-beatles-picto-rs_5c77f18519960.jpg"
+    description: "Un concert légendaire des Beatles au Stade de France, réunissant des milliers de fans.",
+    image_url: "https://www.radiofrance.fr/s3/cruiser-production-eu3/2017/09/aba5ee37-f87f-469b-b8a7-8135934fa366/640x340_beatles_gettyimages-89724270.jpg"
   },
   {
     date: DateTime.now + rand(1..15).days,
     price: 26.90,
     location: "Athena Art Café, 3 rue Claude Chahu Paris 75016",
     title: "Café peinture",
-    description: "Un café peinture chaleureux où créativité et convivialité se rencontrent, invitant les participants à exprimer leur art tout en savourant une boisson réconfortante.",
+    description: "Un café peinture chaleureux où créativité et convivialité se rencontrent.",
     image_url: "https://cdn.sortiraparis.com/images/80/62403/736808-drink-paint-un-afterwork-peinture-et-degustation-de-vin-en-compagnie-d-un-e-artiste-a-paris.jpg"
   },
   {
@@ -149,7 +24,7 @@ events_data = [
     price: 9.90,
     location: "59 rue des horizons, 75012 Paris",
     title: "Cinéma sur les toits",
-    description: "Au programme : des classiques intemporels et des pépites du cinéma indépendant, accompagnés de pop-corn artisanal, de cocktails estivaux, et de la douce brise parisienne.",
+    description: "Au programme : des classiques intemporels et des pépites du cinéma indépendant.",
     image_url: "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/07/19141426/rooftop-cinema-edit-xlarge-1024x577.jpg"
   },
   {
@@ -157,7 +32,7 @@ events_data = [
     price: 89.00,
     location: "Boulevard du parc, 77700 Coupvray",
     title: "Disneyland",
-    description: "Une journée magique à Disneyland Paris, où attractions, parades féeriques et rencontres avec les personnages emblématiques transportent petits et grands dans un rêve éveillé.",
+    description: "Une journée magique à Disneyland Paris, où attractions et parades féeriques deviennent réalité.",
     image_url: "https://res.cloudinary.com/du5jifpgg/image/upload/t_opengraph_image/Parcours/itin%C3%A9raires/Disneyland-et-alentours/Fetes-de-fin-d-annee-2021-a-disneyland-paris-header.jpg"
   },
   {
@@ -165,7 +40,7 @@ events_data = [
     price: 23.50,
     location: "5 Quai Marcel Dassault - 92150 Suresnes",
     title: "Brunch sur une péniche",
-    description: "Un brunch sur une péniche, mêlant délices gourmands et vue imprenable, où l’on savoure un repas raffiné tout en glissant paisiblement sur la Seine.",
+    description: "Un brunch sur une péniche, mêlant délices gourmands et vue imprenable.",
     image_url: "https://uploads.lebonbon.fr/source/2022/november/16172/img-3969-1-_1_2000.jpg"
   },
   {
@@ -173,15 +48,15 @@ events_data = [
       price: 11.50,
       location: "Grand Palais Immersif, 110, rue de Lyon, 75012 Paris",
       title: "Exposition PIXELS de Miguel Chevalier",
-      description: "Le Grand Palais Immersif vous invite à découvrir PIXELS, la première grande exposition parisienne dédiée à Miguel Chevalier, pionnier de l’art numérique. Installée au cœur de la Bastille, cette exposition exceptionnelle, pensée sur deux étages et occupant plus de 1200 m², vous plongera dans un univers où réel et virtuel fusionnent pour repousser les frontières",
+      description: "La première grande exposition parisienne dédiée à l’art numérique.",
       image_url: "https://grandpalais-immersif.fr/sites/immersif/files/styles/w1920_extra_wide/public/2024-10/GPI_miguelchevalier_affiche_231024.jpg?itok=k7OqlfQc"
   },
   {
       date: DateTime.now + rand(1..15).days,
-      price: 0.0,
+      price: 5.0,
       location: "Paris",
       title: "Run dans Paris avec RunNation",
-      description: "Un footing dynamique avec l’appli de jeux de running Run Nation, où chaque kilomètre parcouru devient une aventure ludique, transformant les rues de Paris en un terrain de jeu interactif pour allier sport et fun.",
+      description: "Un footing dynamique avec l’appli de jeux de running Run Nation.",
       image_url: "https://www2.u-trail.com/wp-content/uploads/2022/01/footig.jpg"
   },
   {
@@ -189,7 +64,7 @@ events_data = [
     price: 6.50,
     location: "14 rue Crespin du gast, 75011 Paris",
     title: "Concours de fléchettes",
-    description: "Un concours de fléchettes convivial à l’école Le Wagon, organisé entre deux cours de Ruby, où étudiants et passionnés se défient dans une ambiance festive et décontractée, alliant précision et bonne humeur.",
+    description: "Un concours de fléchettes convivial à l’école Le Wagon.",
     image_url: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Darts_in_a_dartboard.jpg"
   },
   {
@@ -197,16 +72,16 @@ events_data = [
       price: 19.90,
       location: "Pl. de l'Opéra, 75009 Paris",
       title: "Escape Game à l'Opéra garnier",
-      description: "Un escape game palpitant à l'Opéra Garnier, où les participants explorent les mystérieuses coulisses de ce monument emblématique, résolvant énigmes et secrets cachés entre ses murs majestueux.",
+      description: "Un escape game palpitant où les participants explorent les mystérieuses coulisses de ce monument emblématique.",
       image_url: "https://www.dansesaveclaplume.com/wordpress/wp-content/uploads/inside-opera_home-ok.jpg"
   },
   {
       date: DateTime.now + rand(1..15).days,
-      price: 0.0,
+      price: 5.0,
       location: "Paris",
       title: "Regarder un film avec RealMates",
-      description: "Un événement unique où l'on se réunit pour une soirée cinéma inoubliable grâce à l’appli Reelmates, qui rend le choix du film aussi amusant que la projection elle-même, pour une expérience partagée et sans prise de tête, entre rires, découvertes et émotions.",
-      image_url: "https://cdn.paris.fr/qfapv4/2024/07/17/huge-363fb6687bad0dd437a521ac5ab7aace.png"   # event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png"  # event.save!
+      description: "Une soirée cinéma inoubliable grâce à l’appli Reelmates.",
+      image_url: "https://resize.programme-television.org/original/var/premiere/storage/images/news/streaming/prime-video/comment-regarder-des-films-et-des-series-en-streaming-gratuitement-4717889/101960816-1-fre-FR/Comment-regarder-des-films-et-des-series-en-streaming-gratuitement.jpg"   # event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png"  # event.save!
   },
 ]
 events_data.each do |event_data|
@@ -216,7 +91,8 @@ events_data.each do |event_data|
       price: event_data[:price],
       location: event_data[:location],
       title: event_data[:title],
-      description: event_data[:description]
+      description: event_data[:description],
+      image_url: event_data[:image_url]
     )
     # Télécharge et attache l’image
     file = URI.open(event_data[:image_url])

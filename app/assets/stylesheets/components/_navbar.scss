@@ -1,12 +1,63 @@
+/* Navbar principale */
 .navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+  display: flex;
+  justify-content: center; /* Centrer tous les éléments horizontalement */
+  align-items: center;  /* Centrer les éléments verticalement */
+  background-color: $dark-purple;
+  height: 70px;  /* Ajustez la hauteur de la navbar */
+  padding: 0 10px;  /* Réduit l'espace intérieur global */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  border-bottom: 0.2px solid black;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+/* Container pour le logo, décalé légèrement vers la droite */
+.logo-container {
+  display: flex;
+  justify-content: center;  /* Centrer horizontalement */
+  align-items: center;  /* Centrer verticalement */
+  flex-grow: 1;  /* Prendre toute la largeur restante */
+  margin-left: 25%; /* Décale le logo vers la droite */
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+/* Logo : ajustement de la taille */
+.img_navbar {
+  height: 50px;  /* Ajuste la hauteur du logo */
+  object-fit: contain;  /* Garde la proportion du logo */
+}
+
+/* Container pour le lien "Log out" */
+.navbar-nav {
+  display: flex;
+  justify-content: flex-start;  /* Aligne le lien à gauche dans son conteneur */
+  align-items: center;  /* Centrer verticalement */
+  margin-left: auto;  /* Force le lien à se décaler vers la droite */
+  margin-right: 5px;  /* Réduit la marge à droite pour le déplacer plus vers le bord */
+}
+
+/* Style du lien "Log out" */
+.log-out-link {
+  display: inline-flex;
+  align-items: center;  /* Centrer le texte dans le lien */
+  padding: 5px 10px;  /* Réduit le padding pour rendre le lien plus compact */
+  background-color: transparent;  /* Fond transparent */
+  color: white;  /* Texte en blanc */
+  border: none;
+  border-radius: 8px;  /* Coins arrondis */
+  font-size: 16px;
+  text-decoration: none;  /* Enlever la décoration de lien */
+  transition: background-color 0.3s ease;  /* Animation de transition pour le survol */
+}
+
+/* Style au survol du lien */
+.log-out-link:hover {
+  background-color: #4da75f;  /* Fond plus sombre au survol */
+}
+
+/* Ajuster l'élément body pour ne pas être masqué par la navbar fixe */
+body {
+  margin-top: 80px;  /* Ajustez selon la hauteur de la navbar */
 }
