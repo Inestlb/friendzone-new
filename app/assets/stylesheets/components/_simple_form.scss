@@ -77,7 +77,7 @@ body, .avatar-selection, .avatar-option, .avatar-thumbnail, .form-inputs, .form-
 
 /* Design du formulaire "Sign Up" */
 .white {
-  background-color: #2d2a68; /* Assurez-vous de remplacer $dark-purple par la couleur désirée */
+  background-color: $dark-purple; /* Assurez-vous de remplacer $dark-purple par la couleur désirée */
   padding: 30px; /* Ajoute un peu plus d'espace intérieur */
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ajoute un effet de box-shadow similaire à celui des avatars */
