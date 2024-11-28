@@ -1,0 +1,155 @@
+.profile-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-y: auto;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 50px;
+  color: #6c757d;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+.stats-container div {
+  text-align: center;
+  flex: 1;
+}
+
+.stats-container div p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.stats-container div small {
+  display: block;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+
+.answers-grid{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.answers img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 120px; /* Fixe la hauteur pour des proportions uniformes */
+}
+
+.events-container {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.events-container h5 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-item:last-child {
+  margin-bottom: 0;
+}
+
+.event-icon {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.event-text {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.event-icon.event1 {
+  background-color: #ff6b6b;
+}
+
+.event-icon.event2 {
+  background-color: #4dabf7;
+}
+
+.event-icon.event3 {
+  background-color: #4dabf7;
+}
+
+.about {
+  text-align: left;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.action-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.action-buttons button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  // border-style: none;
+}
+
+.button-label {
+  margin-top: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #6c757d;
+  text-align: center;
+}
+
+.name {
+  text-align: center;
+}
