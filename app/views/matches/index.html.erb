@@ -1,0 +1,37 @@
+<%# <div class="messages-container">
+
+  <div class="messages-header">
+    <h2>Messagerie</h2>
+  </div>
+
+  <div class="messages-list d-flex align-items-center p-3 my-3 text-white-50 bg-blue rounded box-shadow">
+    <% @matches.each do |match| %>
+      <%# <div class="message-item">
+        <div class="avatar">
+          <%= cl_image_tag message.avatar_url, class: 'avatar-img', alt: message.name %>
+        <%# </div>
+        <div class="message-content">
+          <p class="message-name"><%= message.name %></p>
+          <%# <p class="message-preview"><%= message.preview %></p>
+        <%# </div>
+      </div>
+    <% end %>
+  <%# </div> %>
+
+<div class="messaging-dashboard">
+  <h1 class="dashboard-title">Messagerie</h1>
+
+  <div class="conversations-list">
+    <% @matches.each do |match| %>
+      <div class="conversation-item">
+        <div class="avatar-container">
+          <%= cl_image_tag match.avatar_url, class: 'avatar-img', alt: match.name %>
+        </div>
+        <div class="conversation-info">
+          <p class="user-name"><%= match.name %></p>
+          <p class="last-message"><%= match.last_message.preview %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
