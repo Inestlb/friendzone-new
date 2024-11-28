@@ -7,22 +7,64 @@
                data-swipe-target="card"
                data-id="<%= user.id %>"
                data-current="<%= current_user.id %>">
-            <%= link_to 'Profile', user_path(user), class: 'profile-link hidden' %>
             <div class="swiper__card__content">
 
               <div class="swiper__card__content_top">
 								<%# La partie du haut de la carte %>
               </div>
+                <div class="avatar">
+                <%= cl_image_tag user.avatar_url, class: 'swiper__card__img' %>
+                </div>
 
-              <% if user.avatar.attached? %>
-                <%= cl_image_tag user.avatar.key, class: 'swiper__card__img' %>
-              <% else %>
-                <%= image_tag "avatar-1.png", class: 'swiper__card__img' %>
-              <% end %>
+                <div class="name">
+                  <strong><%= user.name %></strong>
+                </div>
+                     <!-- Stats Section -->
+              <div class="stats-container">
+                <div class="stats-item">
+                  <p>5 km</p>
+                  <small>Distance</small>
+                </div>
+                <div class="stats-item">
+                  <p><%= user.age %></p>
+                  <small>Âge</small>
+                </div>
+                <div class="stats-item">
+                  <p><%= user.language %></p>
+                  <small>Langues</small>
+                </div>
+              </div>
+
+   <h5 class="section-title">Réponses</h5>
+    <div class="answers">
+      <img src="https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fête">
+      <img src="https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Parachutisme">
+      <img src="https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cocktail">
+      <img src="https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Voyage">
+    </div>
+
+    <!-- Events -->
+      <div class="events-container">
+      <h5>Événements</h5>
+      <div class="event-item">
+        <div class="event-icon event1"></div>
+        <p class="event-text">Beach-Volley à Pantin</p>
+      </div>
+      <div class="event-item">
+        <div class="event-icon event2"></div>
+        <p class="event-text">Soirée Latino au Salsero</p>
+      </div>
+      <div class="event-item">
+        <div class="event-icon event3"></div>
+        <p class="event-text">Soirée Bachata au Cabaret Sauvage</p>
+      </div>
+    </div>
+
+
 
               <div class="swiper__card__content_bottom">
                 <p class="swiper__card__name">
-                  <strong><%= user.name %></strong>, <span class="profile-age"><%= user.age %></span>
+
                 </p>
                 <p class="swiper__card__distance">
                 </p>

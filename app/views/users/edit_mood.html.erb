@@ -1,0 +1,17 @@
+ <div class="profile-container">
+  <h1>Choose your mood</h1>
+
+  <%= simple_form_for(@user, url: update_mood_user_path(@user), method: :patch, html: { data: { turbo_method: :patch }}) do |f| %>
+    <%= f.input :mood,
+      collection: User::MOODS,
+      as: :radio_buttons,
+      collection_wrapper_tag: 'div',
+      collection_wrapper_class: 'choices-wrapper',
+      label_method: lambda { |choice| render 'users/choice_label', choice: choice },
+      item_wrapper_class: 'choices-item',
+      input_html: { class: 'choices-selector' } %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "next", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+</div>
