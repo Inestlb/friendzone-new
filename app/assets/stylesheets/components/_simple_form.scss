@@ -75,35 +75,67 @@ body, .avatar-selection, .avatar-option, .avatar-thumbnail, .form-inputs, .form-
   font-size: 14px;
 }
 
+/* Design du formulaire "Sign Up" */
 .white {
-  background-color: $dark-purple;
-  padding: 20px;
+  background-color: #2d2a68; /* Assurez-vous de remplacer $dark-purple par la couleur désirée */
+  padding: 30px; /* Ajoute un peu plus d'espace intérieur */
   border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ajoute un effet de box-shadow similaire à celui des avatars */
   width: 100%;
   max-width: 500px; /* Limite la largeur du formulaire */
-  margin: 10px auto 0; /* Réduit l'écartement en haut à 30px au lieu de 60px */
+  margin: 40px auto; /* Centre le formulaire sur la page avec un écart du haut */
 }
 
-.form-text{
-  color: $white;
+/* Applique une bordure fine et légère autour du formulaire */
+.simple-form {
+  border: 1px solid #9b7cc7; /* Bordure légère et couleur similaire aux avatars */
+  border-radius: 8px; /* Bords arrondis */
+  padding: 20px; /* Un peu d'espace intérieur pour les champs */
 }
 
-/* Applique le texte en blanc dans tous les champs de formulaire */
+/* Assurez-vous que tous les champs du formulaire ont le même style */
 input, textarea, select {
-  color: white !important; /* Assure que le texte entré est en blanc */
-  background-color: transparent; /* Assure que le fond reste transparent si nécessaire */
-  border: 1px solid #9b7cc7; /* Vous pouvez personnaliser la bordure si nécessaire */
-  padding: 8px 12px; /* Ajuste le padding pour plus de confort */
-  border-radius: 4px; /* Pour avoir des bords arrondis sur les inputs */
-}
-
-/* Optionnel : Modifie la couleur du texte du label, si vous en avez */
-label {
-  color: white; /* Texte en blanc pour les labels */
+  color: white !important; /* Texte en blanc */
+  background-color: transparent; /* Fond transparent */
+  border: 1px solid #9b7cc7; /* Bordure légère similaire à celle des avatars */
+  padding: 8px 12px; /* Espacement confortable dans les champs */
+  border-radius: 4px; /* Bords arrondis pour les champs */
 }
 
 /* Optionnel : Modifie la couleur des placeholders */
 input::placeholder, textarea::placeholder {
   color: #999; /* Couleur du texte des placeholders */
+}
+
+/* Optionnel : Style pour les labels */
+label {
+  color: white;
+}
+
+/* Centrage du bouton */
+.form-actions {
+  text-align: center; /* Centre le contenu dans cette section */
+  margin-top: 20px; /* Espacement au-dessus du bouton */
+}
+
+.form-actions input[type="submit"] {
+  background-color: #9b7cc7; /* Couleur de fond light purple */
+  color: white; /* Texte en blanc */
+  border: 2px solid #9b7cc7; /* Bordure light purple */
+  padding: 12px 20px; /* Padding pour rendre le bouton plus large */
+  border-radius: 8px; /* Bords arrondis */
+  cursor: pointer; /* Change le curseur en pointeur pour indiquer que c'est cliquable */
+  transition: all 0.3s ease; /* Transition fluide pour les effets */
+}
+
+/* Effet de survol */
+.form-actions input[type="submit"]:hover {
+  background-color: #8a6bb7; /* Changer légèrement la couleur du fond au survol */
+  border-color: #8a6bb7; /* Changer la couleur de la bordure au survol */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ajouter une ombre lors du survol */
+}
+
+.form-actions input[type="submit"]:focus {
+  outline: none; /* Retirer le contour au focus */
+  box-shadow: 0 0 10px rgba(155, 124, 199, 0.8); /* Ombre accentuée lorsqu'il est focus */
 }
