@@ -1,0 +1,25 @@
+<div class="all-events-cards">
+  <% @events.each do |event| %>
+    <div class="card-event inter-regular">
+      <!-- Image de l'événement -->
+      <img src="<%= event.image_url %>" alt="<%= event.title %>" />
+
+      <!-- Informations principales -->
+      <div class="card-event-infos">
+        <div class="card-event-details inter-regular">
+          <!-- Titre -->
+          <h2><%= event.title %></h2>
+          <!-- Description -->
+          <p class="card-event-description"><%= event.description %></p>
+          <!-- Date -->
+          <p class="card-event-date"><%= event.date.strftime("%B, %d %Y") %></p>
+          <!-- Lieu -->
+          <p class="card-event-location"><%= event.location %></p>
+        </div>
+
+        <!-- Prix -->
+        <h2 class="card-event-pricing inter-regular"><%= event.price %> €</h2>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,35 @@
+.app-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $dark-purple;
+  border-top: 0.2px solid black;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.footer-item {
+  text-align: center;
+  color: #1EDD88;
+  text-decoration: none;
+  font-size: 14px;
+  flex: 1;
+}
+
+.footer-item i {
+  font-size: 20px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.footer-item:hover {
+  color: white;
+}
