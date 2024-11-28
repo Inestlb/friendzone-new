@@ -1,16 +1,36 @@
 .navbar-lewagon {
+  display: flex;
   justify-content: space-between;
-  background: transparent;
+  align-items: center;
+  background: $dark-purple;
+  height: 70px;  /* Ajustez cette valeur pour réduire la hauteur de la navbar */
+  padding: 0 10px;  /* Ajoutez du padding si vous voulez un peu d'espace autour des éléments */
+  position: fixed;  /* Ajout de la position fixe */
+  top: 0;  /* Place la navbar en haut de la page */
+  left: 0;  /* Aligne la navbar sur le bord gauche */
+  width: 100%;  /* S'assure que la navbar s'étend sur toute la largeur de l'écran */
+  z-index: 1000;  /* Assurez-vous que la navbar est au-dessus du contenu */
+  border-bottom: 0.2px solid black;
+
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.avatar {
-  width: 50px; /* Taille ajustable selon vos besoins */
-  height: 50px; /* Taille ajustable selon vos besoins */
-  border-radius: 50%; /* Rend l'image circulaire */
-  object-fit: cover; /* Pour ajuster le contenu dans le cercle */
-  border: 2px solid #fefbfc; /* Optionnel, ajoute une bordure */
+.logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-container {
+  display: flex;
+  justify-content: flex-end; /* Aligne l'avatar à droite */
+}
+
+.img_navbar {
+  height: 70px;
+  width: 190px;
+  object-fit: contain;  /* Assurez-vous que l'image ne soit pas déformée */
 }

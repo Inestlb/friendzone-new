@@ -1,0 +1,86 @@
+.all-events-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Espacement entre les cartes */
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+.card-event {
+  overflow: hidden;
+  background: #1d1544; /* Fond sombre */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4); /* Ombre plus grande pour mieux faire ressortir les cartes */
+  border-radius: 12px; /* Légèrement plus arrondi */
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* Espacement entre sections */
+  padding-left: 16px; /* Ajout de marge à gauche */
+  padding-right: 16px; /* Ajout de marge à droite */
+  transition: box-shadow 0.3s ease-in-out; /* Animation sur hover pour plus d'interactivité */
+  border: 1px solid rgba(133, 118, 255, 0.3); /* Bord léger en light purple avec transparence */
+}
+
+
+.card-event:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6); /* Augmenter l'ombre au survol */
+}
+
+.card-event > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px; /* Espacement sous l'image */
+}
+
+.card-event-infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%; /* Assurez-vous que tout l'espace horizontal est utilisé */
+}
+
+.card-event-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Petit espacement entre les textes */
+  flex: 1; /* Laisser le plus d'espace possible pour les détails */
+}
+
+.card-event-details h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.card-event-details p {
+  font-size: 14px;
+  margin: 0;
+  color: white;
+  opacity: 0.9;
+}
+
+.card-event-date {
+  color: #8576FF !important; /* Bleu pour la date */
+  font-weight: bold;
+}
+
+.card-event-location {
+  color: #aaaaaa; /* Gris pour le lieu */
+  font-size: smaller;
+}
+
+.card-event-pricing {
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+  align-self: flex-end; /* Aligner à droite */
+  white-space: nowrap; /* Eviter que le texte se divise sur plusieurs lignes */
+  min-width: 60px; /* Largeur minimale pour éviter que le prix ne soit coupé */
+  padding-left: 10px; /* Un petit espace à gauche pour le prix */
+  margin-top: 8px; /* Ajout d'un petit espace en haut pour éviter que le prix soit trop proche du texte */
+}
