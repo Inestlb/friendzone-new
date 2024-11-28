@@ -1,7 +1,16 @@
+.edit_user {
+  legend {
+    display: none;
+  }
+}
+
 .choices-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .choices-item {
@@ -21,41 +30,17 @@
 
 .choices-selector:checked + label {
   color: white !important;
-}
-
-
-#snippet_choices_ruby + label {
-  color: #FD1015;
-}
-
-#snippet_choices_ruby:checked + label {
-  background-color: #FD1015;
-  border-color: #FD1015;
-}
-
-
-#snippet_choices_javascript + label {
-  color: #FFC65A;
-}
-
-#snippet_choices_javascript:checked + label {
-  background-color: #FFC65A;
-  border-color: #FFC65A;
-}
-
-
-#snippet_choices_css + label {
-  color: #62DDF5;
-}
-
-#snippet_choices_css:checked + label {
-  background-color: #62DDF5;
-  border-color: #62DDF5;
+  img {
+    box-shadow: 0 0 1rem rgba(0,0,0,0.8);
+    transform: scale(1.02)
+  }
 }
 
 .choice-label img {
   width: 300px;
   height: 150px;
   object-fit: cover;
-  filter: grayscale(1);
+  border-radius: 0.5rem;
+  transition: all 0.2s;
+
 }

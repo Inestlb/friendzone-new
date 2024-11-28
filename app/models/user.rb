@@ -2,6 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   MOODS = ["cosy", "drink", "party_night", "museum"]
+  VACATIONS = ["montagne", "plage", "city", "foret"]
+  LIFE_CHOICES = ["famille", "amour", "argent", "travail"]
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

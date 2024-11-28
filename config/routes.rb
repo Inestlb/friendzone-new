@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :index, :edit, :update] do
     member do
       get :edit_mood
-      put :update_mood
+      patch :update_mood
       get :edit_vacation
-      put :update_vacation
-      get :edit_life_choices
-      put :update_life_choices
+      patch :update_vacation
+      get :edit_life_choice
+      patch :update_life_choice
     end
     resources :likes, only: [:create]
   end

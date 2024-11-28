@@ -1,49 +1,17 @@
  <div class="profile-container">
-    <h1>Choose your mood</h1>
+  <h1>Choose your mood</h1>
 
-    <%= simple_form_for @user, url: update_mood_user_path(@user) do |f| %>
-      <%= f.input :mood,
-        collection: User::MOODS,
-        as: :radio_buttons,
-        collection_wrapper_tag: 'div',
-        collection_wrapper_class: 'choices-wrapper',
-        label_method: lambda { |choice| render 'users/choice_label', choice: choice },
-        item_wrapper_class: 'choices-item',
-        input_html: { class: 'choices-selector' } %>
-    <% end %>
-
-    </p>
-    <br>
-    <br>
-    <!-- Options Grid -->
-    <div class="options-grid">
-      <!-- Option 1 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg" alt="cosy">
-
-      </div>
-
-      <!-- Option 2 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg" alt="Drink">
-
-      </div>
-
-      <!-- Option 3 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg" alt="party Night">
-
-      </div>
-
-      <!-- Option 4 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg" alt="museum">
-
-      </div>
-      <div class="espace">
-
-      </div>
+  <%= simple_form_for(@user, url: update_mood_user_path(@user), method: :patch, html: { data: { turbo_method: :patch }}) do |f| %>
+    <%= f.input :mood,
+      collection: User::MOODS,
+      as: :radio_buttons,
+      collection_wrapper_tag: 'div',
+      collection_wrapper_class: 'choices-wrapper',
+      label_method: lambda { |choice| render 'users/choice_label', choice: choice },
+      item_wrapper_class: 'choices-item',
+      input_html: { class: 'choices-selector' } %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "next", class: "btn btn-primary" %>
     </div>
-    <br>
-    <br>
-  </div>
+  <% end %>
+</div>

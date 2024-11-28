@@ -1,41 +1,17 @@
 <div class="profile-container">
-    <!-- Question Title -->
-    <br>
-    <h1>Choose Your Mood </h1>
-    <br>
+  <h1>Choose your vacation</h1>
 
-    </p>
-    <br>
-    <br>
-    <!-- Options Grid -->
-    <div class="options-grid">
-      <!-- Option 1 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg" alt="montagne">
-
-      </div>
-
-      <!-- Option 2 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg" alt="plage">
-
-      </div>
-
-      <!-- Option 3 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg" alt="city">
-
-      </div>
-
-      <!-- Option 4 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg" alt="foret">
-
-      </div>
-      <div class="espace">
-
-      </div>
+  <%= simple_form_for(@user, url: update_mood_user_path(@user), method: :patch, html: { data: { turbo_method: :patch }}) do |f| %>
+    <%= f.input :mood,
+      collection: User::VACATIONS,
+      as: :radio_buttons,
+      collection_wrapper_tag: 'div',
+      collection_wrapper_class: 'choices-wrapper',
+      label_method: lambda { |choice| render 'users/choice_label', choice: choice },
+      item_wrapper_class: 'choices-item',
+      input_html: { class: 'choices-selector' } %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "next", class: "btn btn-primary" %>
     </div>
-    <br>
-    <br>
-  </div>
+  <% end %>
+</div>
