@@ -26,7 +26,9 @@ class UsersController < ApplicationController
 
   def update_life_choice
     @user.update(life_choice_params)
-    redirect_to user_path(@user)
+    redirect_to edit_mood_path(@user)
+    # redirect_to user_path(@user)
+
   end
 
   def new

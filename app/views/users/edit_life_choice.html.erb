@@ -1,8 +1,7 @@
-
 <div class="profile-container">
   <h1>Choose your vacation</h1>
 
-  <%= simple_form_for(@user, url: update_mood_user_path(@user), method: :patch, html: { data: { turbo_method: :patch }}) do |f| %>
+  <%= simple_form_for(@user, url: update_life_choice_user_path(@user), method: :patch, html: { data: { turbo_method: :patch }}) do |f| %>
     <%= f.input :mood,
       collection: User::LIFE_CHOICES,
       as: :radio_buttons,
@@ -15,45 +14,3 @@
       <%= f.submit "next", class: "btn btn-primary" %>
     </div>
   <% end %>
-
-
-    <!-- Question Title -->
-    <br>
-    <h1>Choose Your Mood </h1>
-    <br>
-
-    </p>
-    <br>
-    <br>
-    <!-- Options Grid -->
-    <div class="options-grid">
-      <!-- Option 1 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg" alt="famille">
-
-      </div>
-
-      <!-- Option 2 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg" alt="amour">
-
-      </div>
-
-      <!-- Option 3 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg" alt="argent">
-
-      </div>
-
-      <!-- Option 4 -->
-      <div class="option">
-        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg" alt="travail">
-
-      </div>
-      <div class="espace">
-
-      </div>
-    </div>
-    <br>
-    <br>
-  </div>
