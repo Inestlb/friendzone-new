@@ -1,9 +1,13 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
+    <!-- Logo centré et déplacé vers la droite -->
     <div class="logo-container">
       <img src="<%= asset_path 'logo_friendzone.png' %>" alt="Logo Friendzone" class="img_navbar">
     </div>
-      </ul>
+
+    <!-- Liens (Log out) à droite -->
+    <div class="navbar-nav ms-auto bebas-neue-regular">
+      <a href="<%= destroy_user_session_path %>" data-turbo-method="delete" class="log-out-link">Log out</a>
     </div>
   </div>
 </div>

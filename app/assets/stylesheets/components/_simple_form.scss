@@ -1,0 +1,90 @@
+/* Mise en blanc de toutes les polices dans le formulaire */
+body, .avatar-selection, .avatar-option, .avatar-thumbnail, .form-inputs, .form-actions, label, .avatar-option label, .error, #error_explanation, #error_explanation li {
+  color: white !important;
+}
+
+/* Sélection des avatars */
+.avatar-selection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.avatar-option {
+  text-align: center;
+  width: 30%; /* Affiche 3 avatars par ligne */
+  margin-bottom: 10px;
+}
+
+.avatar-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer; /* Permet de cliquer sur l'image */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animation pour l'effet de survol */
+}
+
+/* Masque les boutons radio */
+.avatar-option input {
+  display: none;
+}
+
+/* Effet de box-shadow et border lorsque l'avatar est sélectionné */
+.avatar-option input:checked + label .avatar-thumbnail {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère autour de l'avatar sélectionné */
+  transform: scale(1.05); /* Agrandissement léger de l'image sélectionnée */
+  border: 1px solid #9b7cc7; /* Bordure fine et light-purple lorsque l'avatar est sélectionné */
+}
+
+/* Ajouter un effet d'ombre légère au survol de l'image */
+.avatar-option label:hover .avatar-thumbnail {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus claire lors du survol */
+}
+
+/* Ajuster l'étiquette des avatars */
+.avatar-option label {
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.avatar-option input:checked + label {
+  color: #6af6a2; /* Légère surbrillance lors de la sélection */
+}
+
+/* Ajuster les erreurs de notification */
+#error_explanation {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#error_explanation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#error_explanation li {
+  color: #721c24;
+  font-size: 14px;
+}
+
+.white {
+  background-color: $dark-purple;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Limite la largeur du formulaire */
+  margin: 10px auto 0; /* Réduit l'écartement en haut à 30px au lieu de 60px */
+}
+
+.form-text{
+  color: $white;
+}
