@@ -2,9 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: transparent;
+  background: $dark-purple;
   height: 70px;  /* Ajustez cette valeur pour réduire la hauteur de la navbar */
   padding: 0 10px;  /* Ajoutez du padding si vous voulez un peu d'espace autour des éléments */
+  position: fixed;  /* Ajout de la position fixe */
+  top: 0;  /* Place la navbar en haut de la page */
+  left: 0;  /* Aligne la navbar sur le bord gauche */
+  width: 100%;  /* S'assure que la navbar s'étend sur toute la largeur de l'écran */
+  z-index: 1000;  /* Assurez-vous que la navbar est au-dessus du contenu */
+  border-bottom: 0.2px solid black;
+
 }
 
 .navbar-lewagon .navbar-collapse {
