@@ -1,0 +1,143 @@
+
+
+.profile-container {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background-color: #1d1544;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow-y: auto;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  font-size: 50px;
+  color: #6af6a2;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name {
+  font-size: 19px;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+  color: #6af6a2;
+}
+
+.age-language {
+  font-size: 16px;
+  color: #6af6a2;
+  font-family: "Inter", sans-serif;
+  margin-top: 10px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+//
+.stats-item {
+  text-align: center;
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  background-color: #f8f8f8;
+  border-radius: 6px;
+  margin: 10px;
+  // padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+// .stats-item p {
+//   font-size: 18px;
+//   font-weight: bold;
+//   margin-bottom: 5px;
+//   font-family: "Inter", sans-serif;
+// }
+
+// .stats-item small {
+//   font-size: 14px;
+//   color: #666;
+//   font-family: "Inter", sans-serif;
+// }
+.stats-item p {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  letter-spacing: 1px;
+  font-family: "Inter", sans-serif;
+}
+
+.stats-item small {
+  font-size: 12px;
+  color: #888;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-top: 5px;
+}
+.section-title {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.answers {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.answers img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.events-container {
+  margin-top: 30px;
+  font-family: "Inter", sans-serif;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: "Inter", sans-serif;
+}
+
+.event-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3498db;
+  margin-right: 15px;
+}
+
+.event-text {
+  font-size: 16px;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+}

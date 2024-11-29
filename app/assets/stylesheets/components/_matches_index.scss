@@ -1,82 +1,58 @@
-.messages-header {
-  color: white;
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-align: center;
-}
-
-.messages-container{
-  background-color: black;
-}
-
-/* Styles pour le tableau de bord de messagerie */
-.messaging-dashboard {
-  font-family: Arial, sans-serif;
+.messaging-container {
   padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
 }
 
-.dashboard-title {
-  text-align: center;
-  font-size: 2rem;
-  color: #333;
+.messaging-title {
+  font-size: 24px;
+  font-weight: bold;
   margin-bottom: 20px;
+  color: #333;
 }
 
-/* Liste des conversations */
 .conversations-list {
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/* Chaque élément de la conversation */
-.conversation-item {
+.conversation-card {
   display: flex;
   align-items: center;
   padding: 15px;
   border: 1px solid #ddd;
   border-radius: 10px;
-  background-color: #f9f9f9;
-  transition: background-color 0.3s;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.conversation-item:hover {
-  background-color: #f1f1f1;
-}
-
-/* Conteneur pour l'avatar */
-.avatar-container {
-  margin-right: 15px;
-}
-
-/* Avatar des utilisateurs */
-.avatar-img {
+.conversation-avatar img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  object-fit: cover;
+  margin-right: 15px;
 }
 
-/* Informations sur la conversation */
-.conversation-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.conversation-details {
+  flex: 1;
 }
 
-/* Nom de l'utilisateur */
-.user-name {
+.conversation-user-name {
+  font-size: 16px;
   font-weight: bold;
-  margin: 0;
   color: #333;
+  margin: 0;
 }
 
-/* Aperçu du dernier message */
-.last-message {
-  font-size: 0.9rem;
+.conversation-last-message {
+  font-size: 14px;
   color: #666;
-  margin-top: 5px;
+  margin: 5px 0;
+}
+
+.conversation-date {
+  font-size: 12px;
+  color: #aaa;
+  text-align: right;
 }

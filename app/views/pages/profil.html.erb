@@ -1,0 +1,53 @@
+ <div class="profile-container">
+  <!-- Profil Header -->
+  <div class="profile-header">
+    <div class="avatar">
+      <%= cl_image_tag @user.avatar_url, class: "rounded-circle me-3", width: 80, height: 80, alt: "Avatar de #{@user.name}" %>
+    </div>
+    <div class="name">
+      <strong><%= @user.name %></strong>
+    </div>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats-container">
+    <div class="stats-item">
+      <p>5 km</p>
+      <small>Distance</small>
+    </div>
+    <div class="stats-item">
+      <p><%= @user.age %></p>
+      <small>Âge</small>
+    </div>
+    <div class="stats-item">
+      <p><%= @user.language %></p>
+      <small>Langues</small>
+    </div>
+  </div>
+
+  <!-- Réponses Section -->
+  <h5 class="section-title">Réponses</h5>
+  <div class="answers">
+    <%= image_tag 'https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop', alt: 'Fête' %>
+    <%= image_tag 'https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop', alt: 'Parachutisme' %>
+    <%= image_tag 'https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop', alt: 'Cocktail' %>
+    <%= image_tag 'https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop', alt: 'Voyage' %>
+  </div>
+
+  <!-- Events Section -->
+  <div class="events-container">
+    <h5>Évènements</h5>
+    <div class="event-item">
+      <div class="event-icon event1"></div>
+      <p class="event-text">Beach-Volley à Pantin</p>
+    </div>
+    <div class="event-item">
+      <div class="event-icon event2"></div>
+      <p class="event-text">Soirée Latino au Salsero</p>
+    </div>
+    <div class="event-item">
+      <div class="event-icon event3"></div>
+      <p class="event-text">Soirée Bachata au Cabaret Sauvage</p>
+    </div>
+  </div>
+</div>
