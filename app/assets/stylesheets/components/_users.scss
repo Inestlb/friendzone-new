@@ -7,6 +7,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   overflow-y: auto;
+
 }
 
 .avatar {
@@ -25,11 +26,12 @@
 .stats-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   background-color: #f8f9fa;
   padding: 15px;
   border-radius: 15px;
   margin: 20px 0;
+  color:#333;
 }
 
 .stats-container div {
@@ -53,6 +55,7 @@
   font-weight: bold;
   margin-top: 20px;
   margin-bottom: 10px;
+  color:#333;
 }
 
 
@@ -75,6 +78,7 @@
   padding: 15px;
   border-radius: 15px;
   text-align: left;
+  color:#333;
 }
 
 .events-container h5 {
@@ -105,7 +109,7 @@
 }
 
 .event-icon.event1 {
-  background-color: #ff6b6b;
+  background-color: $green;
 }
 
 .event-icon.event2 {
