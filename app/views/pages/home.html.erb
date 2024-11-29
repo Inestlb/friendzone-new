@@ -1,7 +1,12 @@
-<body style="color: #ffffff;">
-  <div class="dark-purple">
-    <h1>Pages#home</h1>
-    <p>Find me in app/views/pages/home.html.erb</p>
-    <p class="button inter-regular">Button</p>
-  </div>
-</body>
+<div class="background">
+</div>
+
+<div class="text">
+    <h1><%= image_tag 'logo_friendzone.png', alt: 'Friendzone Logo' %></h1>
+    <h2 class="bebas-neue-regular">The only friendzone that doesn't hurt</h2>
+</div>
+
+<div class="content button-container inter-regular">
+    <p><%= link_to 'Sign in', new_user_session_path, class: 'button' %></p>
+    <p><%= link_to 'Sign up', new_user_registration_path, class: 'button' %></p>
+</div>
