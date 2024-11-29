@@ -1,14 +1,15 @@
 
 
 .profile-container {
-  max-width: 400px;
+  width: 100%;
   margin: auto;
   padding: 20px;
-  background-color: $dark-purple;
-  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   overflow-y: auto;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 1.4rem;
 }
 
 .avatar {

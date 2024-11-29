@@ -113,9 +113,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_28_144452) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "age", null: false
-    t.integer "friends_age", null: false
-    t.integer "friends_distance", null: false
+    t.integer "age", default: 0, null: false
+    t.integer "friends_age", default: 0, null: false
+    t.integer "friends_distance", default: 0, null: false
     t.string "name"
     t.string "language"
     t.string "location"
