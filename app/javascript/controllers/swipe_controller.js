@@ -78,11 +78,11 @@ export default class extends Controller {
   }
 
   updateUIWithMatch(json) {
-    console.log(this.modalTarget);
-    console.log(this.modalBodyTarget);
+    // console.log(this.modalTarget);
+    console.log(json);
     this.modalInstance.show();
     this.modalBodyTarget.innerHTML = `
-      <h5 class="modal-title text-center">🎉 Match Réussi ! 🎉</h5>
+      <h5 class="text-center">🎉 Match Réussi ! 🎉</h5>
       <p>${json.message}</p>
       <div class="d-flex justify-content-end mt-3">
         <button class="btn btn-primary me-2" onclick="window.location.href='/messages'">Discuter</button>
@@ -90,6 +90,7 @@ export default class extends Controller {
       </div>
     `
     console.log(this.modalBodyTarget);
+    document.querySelector(".modal-backdrop").remove()
   }
 
 
