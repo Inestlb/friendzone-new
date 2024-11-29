@@ -1,4 +1,4 @@
-<footer class="app-footer">
+<%# <footer class="app-footer">
   <nav class="footer-nav">
     <a href="#event" class="footer-item">
       <i class="fa-regular fa-calendar-days"></i>
@@ -12,5 +12,22 @@
      <%= link_to user_path(current_user), class: 'footer-item' do %>
         <i class="fa fa-user"></i>
      <% end %>
+  </nav>
+</footer> %>
+
+<footer class="app-footer">
+  <nav class="footer-nav">
+    <%= link_to events_path, class: "footer-item" do %>
+      <i class="fa-regular fa-calendar-days"></i>
+    <% end %>
+    <%= link_to users_path, class: "footer-item" do %>
+      <i class="fa fa-hand-holding-heart"></i>
+    <% end %>
+    <%= link_to matches_path, class: "footer-item" do %>
+      <i class="fa fa-message"></i>
+    <% end %>
+    <%= link_to profil_path, class: "footer-item" do %>
+      <i class="fa fa-user"></i>
+    <% end %>
   </nav>
 </footer>

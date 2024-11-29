@@ -1,28 +1,30 @@
-<h2>Sign up</h2>
-
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" }%>
-    <%= f.input :avatar, as: :file %>
+  <div class="form-inputs white inter-regular">
+    <%= f.input :email, required: true, autofocus: true, input_html: { autocomplete: "email" } %>
     <%= f.input :age %>
+
+    <div class="avatar-selection">
+      <% Dir.glob(Rails.root.join('app', 'assets', 'images', 'avatars', '*.{jpg,png}')).each_with_index do |file, index| %>
+        <div class="avatar-option">
+          <%= radio_button_tag 'user[avatar_url]', File.basename(file), index == 0, id: "user_avatar_url_#{index}" %>
+          <label for="user_avatar_url_<%= index %>">
+            <%= image_tag("avatars/#{File.basename(file)}", class: 'avatar-thumbnail') %>
+          </label>
+          <label for="user_avatar_url_<%= index %>">Avatar <%= index + 1 %></label>
+        </div>
+      <% end %>
+    </div>
     <%= f.input :friends_age %>
     <%= f.input :friends_distance %>
-    <%= f.input :password,
-                required: true,
-                hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                input_html: { autocomplete: "new-password" } %>
-    <%= f.input :password_confirmation,
-                required: true,
-                input_html: { autocomplete: "new-password" } %>
-  </div>
+    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length), input_html: { autocomplete: "new-password" } %>
+    <%= f.input :password_confirmation, required: true, input_html: { autocomplete: "new-password" } %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+    <!-- Div pour centrer le bouton -->
+    <div class="form-actions text-center">
+      <%= f.button :submit, "Sign up" %>
+    </div>
   </div>
 <% end %>
 
