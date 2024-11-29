@@ -1,6 +1,8 @@
 require "open-uri"
 
 Event.destroy_all
+Like.destroy_all
+Match.destroy_all
 
 events_data = [
   {
