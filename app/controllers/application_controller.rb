@@ -9,4 +9,12 @@ class ApplicationController < ActionController::Base
     # For additional in app/views/devise/registrations/edit.html.erb
     devise_parameter_sanitizer.permit(:account_update, keys: [:avatar, :friends_age, :friends_distance, :avatar_url])
   end
+
+  def after_sign_up_path(resources)
+    edit_mood_user_path(current_user)
+  end
+
+  def after_sign_in_path_for(resource)
+    edit_mood_user_path(current_user)
+  end
 end

@@ -9,11 +9,11 @@
     <a href="#messages" class="footer-item">
       <i class="fa fa-message"></i>
     </a>
-    <a href="#profile" class="footer-item">
-      <i class="fa fa-user"></i>
-     </a>
-  </nav>
-</footer> %>
+     <%= link_to user_path(current_user), class: 'footer-item' do %>
+        <%# <i class="fa fa-user"></i>
+     <% end %>
+  <%# </nav> %>
+<%# </footer>  %>
 
 <footer class="app-footer">
   <nav class="footer-nav">

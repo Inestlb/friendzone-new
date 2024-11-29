@@ -2,7 +2,7 @@
   <h1>Choose your vacation</h1>
 
   <%= simple_form_for(@user, url: update_life_choice_user_path(@user), method: :patch, html: { data: { turbo_method: :patch }}) do |f| %>
-    <%= f.input :mood,
+    <%= f.input :life_choice,
       collection: User::LIFE_CHOICES,
       as: :radio_buttons,
       collection_wrapper_tag: 'div',
