@@ -20,6 +20,21 @@
         <!-- Prix -->
         <h2 class="card-event-pricing inter-regular"><%= event.price %> €</h2>
       </div>
+
+      <!-- Boutons -->
+      <div class="buttons">
+        <!-- Bouton "See more" -->
+        <%= link_to event_path(event), class: "btn-see-more" do %>
+          <i class="fa-solid fa-eye" style="color: #ffffff;"></i> See more
+        <% end %>
+
+        <!-- Bouton "Share" -->
+        <%= link_to "#", class: "btn-share" do %>
+          <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Share
+        <% end %>
+      </div>
+
     </div>
   <% end %>
 </div>
+

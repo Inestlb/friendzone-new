@@ -22,7 +22,6 @@
   border: 1px solid rgba(133, 118, 255, 0.3); /* Bord léger en light purple avec transparence */
 }
 
-
 .card-event:hover {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6); /* Augmenter l'ombre au survol */
 }
@@ -83,4 +82,37 @@
   min-width: 60px; /* Largeur minimale pour éviter que le prix ne soit coupé */
   padding-left: 10px; /* Un petit espace à gauche pour le prix */
   margin-top: 8px; /* Ajout d'un petit espace en haut pour éviter que le prix soit trop proche du texte */
+}
+.buttons {
+  display: flex;
+  justify-content: center; /* Centre les boutons horizontalement */
+  gap: 20px; /* Espace entre les boutons */
+  margin-top: 20px;
+}
+
+/* Style commun aux boutons */
+.buttons .btn-see-more,
+.buttons .btn-share {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px; /* Taille légèrement réduite */
+  border-radius: 8px; /* Border-radius plus faible */
+  background-color: #8576FF;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Icônes dans les boutons */
+.buttons .btn-see-more i,
+.buttons .btn-share i {
+  margin-right: 8px;
+}
+
+/* Effet au survol */
+.buttons .btn-see-more:hover,
+.buttons .btn-share:hover {
+  background-color: #6a5acd;
+  transform: translateY(-2px);
 }
