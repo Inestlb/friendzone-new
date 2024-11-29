@@ -1,0 +1,141 @@
+/* Mise en blanc de toutes les polices dans le formulaire */
+body, .avatar-selection, .avatar-option, .avatar-thumbnail, .form-inputs, .form-actions, label, .avatar-option label, .error, #error_explanation, #error_explanation li {
+  color: white !important;
+}
+
+/* Sélection des avatars */
+.avatar-selection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.avatar-option {
+  text-align: center;
+  width: 30%; /* Affiche 3 avatars par ligne */
+  margin-bottom: 10px;
+}
+
+.avatar-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  cursor: pointer; /* Permet de cliquer sur l'image */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Animation pour l'effet de survol */
+}
+
+/* Masque les boutons radio */
+.avatar-option input {
+  display: none;
+}
+
+/* Effet de box-shadow et border lorsque l'avatar est sélectionné */
+.avatar-option input:checked + label .avatar-thumbnail {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Ombre légère autour de l'avatar sélectionné */
+  transform: scale(1.05); /* Agrandissement léger de l'image sélectionnée */
+  border: 1px solid #9b7cc7; /* Bordure fine et light-purple lorsque l'avatar est sélectionné */
+}
+
+/* Ajouter un effet d'ombre légère au survol de l'image */
+.avatar-option label:hover .avatar-thumbnail {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ombre plus claire lors du survol */
+}
+
+/* Ajuster l'étiquette des avatars */
+.avatar-option label {
+  display: block;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.avatar-option input:checked + label {
+  color: #6af6a2; /* Légère surbrillance lors de la sélection */
+}
+
+/* Ajuster les erreurs de notification */
+#error_explanation {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+#error_explanation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#error_explanation li {
+  color: #721c24;
+  font-size: 14px;
+}
+
+/* Design du formulaire "Sign Up" */
+.white {
+  background-color: $dark-purple; /* Assurez-vous de remplacer $dark-purple par la couleur désirée */
+  padding: 30px; /* Ajoute un peu plus d'espace intérieur */
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ajoute un effet de box-shadow similaire à celui des avatars */
+  width: 100%;
+  max-width: 500px; /* Limite la largeur du formulaire */
+  margin: 40px auto; /* Centre le formulaire sur la page avec un écart du haut */
+}
+
+/* Applique une bordure fine et légère autour du formulaire */
+.simple-form {
+  border: 1px solid #9b7cc7; /* Bordure légère et couleur similaire aux avatars */
+  border-radius: 8px; /* Bords arrondis */
+  padding: 20px; /* Un peu d'espace intérieur pour les champs */
+}
+
+/* Assurez-vous que tous les champs du formulaire ont le même style */
+input, textarea, select {
+  color: white !important; /* Texte en blanc */
+  background-color: transparent; /* Fond transparent */
+  border: 1px solid #9b7cc7; /* Bordure légère similaire à celle des avatars */
+  padding: 8px 12px; /* Espacement confortable dans les champs */
+  border-radius: 4px; /* Bords arrondis pour les champs */
+}
+
+/* Optionnel : Modifie la couleur des placeholders */
+input::placeholder, textarea::placeholder {
+  color: #999; /* Couleur du texte des placeholders */
+}
+
+/* Optionnel : Style pour les labels */
+label {
+  color: white;
+}
+
+/* Centrage du bouton */
+.form-actions {
+  text-align: center; /* Centre le contenu dans cette section */
+  margin-top: 20px; /* Espacement au-dessus du bouton */
+}
+
+.form-actions input[type="submit"] {
+  background-color: #9b7cc7; /* Couleur de fond light purple */
+  color: white; /* Texte en blanc */
+  border: 2px solid #9b7cc7; /* Bordure light purple */
+  padding: 12px 20px; /* Padding pour rendre le bouton plus large */
+  border-radius: 8px; /* Bords arrondis */
+  cursor: pointer; /* Change le curseur en pointeur pour indiquer que c'est cliquable */
+  transition: all 0.3s ease; /* Transition fluide pour les effets */
+}
+
+/* Effet de survol */
+.form-actions input[type="submit"]:hover {
+  background-color: #8a6bb7; /* Changer légèrement la couleur du fond au survol */
+  border-color: #8a6bb7; /* Changer la couleur de la bordure au survol */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ajouter une ombre lors du survol */
+}
+
+.form-actions input[type="submit"]:focus {
+  outline: none; /* Retirer le contour au focus */
+  box-shadow: 0 0 10px rgba(155, 124, 199, 0.8); /* Ombre accentuée lorsqu'il est focus */
+}

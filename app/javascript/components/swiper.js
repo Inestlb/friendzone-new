@@ -106,7 +106,7 @@ export class Swiper {
 
     if (Math.abs(this.pullDeltaX) >= this.threshold) {
 
-      like ? this.likedCallback(this.currentCard.dataset.id, this.currentCard.dataset.current) : this.dislikedCallback(this.currentCard.dataset.id)
+      like ? this.likedCallback(this.currentCard.dataset.id, this.currentCard.dataset.current) : this.dislikedCallback(this.currentCard.dataset.id, this.currentCard.dataset.current)
 
       this.currentCard.classList.add("swiped")
       setTimeout(() => {

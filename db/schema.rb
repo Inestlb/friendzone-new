@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_11_28_130817) do
+ActiveRecord::Schema[7.1].define(version: 2024_11_28_144452) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -73,6 +74,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_28_130817) do
     t.bigint "liked_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_liked"
     t.index ["liked_id"], name: "index_likes_on_liked_id"
     t.index ["liker_id"], name: "index_likes_on_liker_id"
   end
