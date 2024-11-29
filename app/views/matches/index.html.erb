@@ -1,0 +1,43 @@
+<div class="messaging-container">
+  <!-- Titre principal -->
+  <h1 class="messaging-title">Messagerie</h1>
+
+  <!-- Liste des matchs/conversations -->
+  <div class="conversations-list">
+    <% @matches.each do |match| %>
+      <!-- Détermine l'utilisateur associé au match -->
+      <% matched_user = (match.first_user_id == current_user.id ? User.find(match.second_user_id) : User.find(match.first_user_id)) %>
+
+      <div class="conversation-card">
+        <!-- Avatar de l'utilisateur matché -->
+        <div class="conversation-avatar">
+          <img src="<%= matched_user.avatar_url %>" alt="<%= matched_user.name %>" />
+        </div>
+
+        <!-- Informations principales -->
+        <div class="conversation-details">
+          <!-- Nom de l'utilisateur -->
+          <h2 class="conversation-user-name"><%= matched_user.name %></h2>
+
+          <!-- Aperçu du dernier message (ajuste selon ton modèle de messages) -->
+          <% if match.last_message %>
+            <p class="conversation-last-message">
+              <%= match.last_message.body.truncate(30) %>
+            </p>
+          <% else %>
+            <p class="conversation-last-message">
+              Aucun message pour le moment.
+            </p>
+          <% end %>
+        </div>
+
+        <!-- Date du dernier message -->
+        <% if match.last_message %>
+          <div class="conversation-date">
+            <p><%= match.last_message.created_at.strftime("%d %b %Y, %H:%M") %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
