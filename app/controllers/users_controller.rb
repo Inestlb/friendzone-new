@@ -22,20 +22,19 @@ class UsersController < ApplicationController
   end
 
   def edit_life_choices
+    edit
   end
 
   def update_life_choice
     @user.update(life_choice_params)
     redirect_to users_path
     # redirect_to user_path(@user)
-
   end
 
   def new
   end
 
   def show
-
   end
 
   private

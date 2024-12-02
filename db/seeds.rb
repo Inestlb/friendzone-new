@@ -108,11 +108,11 @@ puts "Creating users..."
 
 users = [
   {
-    name: "Ethan 🇺🇸",
+    name: "Rousselot 🇺🇸",
     email: 'test1@test.test',
     password: '123456',
     age: 23,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-9_sb7sms.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134724/IMG_6150_jojyqa.png",
     language: ["Anglais", "Français"].join(' '),
     mood: "party_night",
     vacation: "forêt",
@@ -120,25 +120,25 @@ users = [
     friends_age: 20,
     friends_distance: 50
   },
+  # {
+  #   name: "Inès",
+  #   email: 'test2@test.test',
+  #   password: '123456',
+  #   age: 25,
+  #   avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
+  #   language: ["Arabe", "Français", "Anglais"].join(' '),
+  #   mood: "museum",
+  #   vacation: "plage",
+  #   life_choice: "amour",
+  #   friends_age: 20,
+  #   friends_distance: 50
+  # },
   {
-    name: "Inès 🇲🇦",
-    email: 'test2@test.test',
-    password: '123456',
-    age: 25,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
-    language: ["Arabe", "Français", "Anglais"].join(' '),
-    mood: "museum",
-    vacation: "plage",
-    life_choice: "amour",
-    friends_age: 20,
-    friends_distance: 50
-  },
-  {
-    name: "Lucas 🇫🇷",
+    name: "Ilan 🇫🇷",
     email: 'test3@test.test',
     password: '123456',
     age: 33,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-1_tghfv0.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134864/IMG_6192_z2ww0o.png",
     language: ["Français"].join(' '),
     mood: "drink",
     vacation: "city",
@@ -146,25 +146,25 @@ users = [
     friends_age: 20,
     friends_distance: 50
   },
+  # {
+  #   name: "Sophia 🇮🇹",
+  #   email: 'test4@test.test',
+  #   password: '123456',
+  #   age: 30,
+  #   avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705731/scale-10_ehgcud.png",
+  #   language: ["Italien", "Anglais"].join(' '),
+  #   mood: "cosy",
+  #   vacation: "plage",
+  #   life_choice: "travail",
+  #   friends_age: 20,
+  #   friends_distance: 50
+  # },
   {
-    name: "Sophia 🇮🇹",
-    email: 'test4@test.test',
-    password: '123456',
-    age: 30,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705731/scale-10_ehgcud.png",
-    language: ["Italien", "Anglais"].join(' '),
-    mood: "cosy",
-    vacation: "plage",
-    life_choice: "travail",
-    friends_age: 20,
-    friends_distance: 50
-  },
-  {
-    name: "Amir",
+    name: "Pierre",
     email: 'test5@test.test',
     password: '123456',
     age: 28,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-6_s1bjnv.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134862/IMG_6201_puog02.png",
     language: ["Hindi", "Anglais", "Français"].join(' '),
     mood: "party_night",
     vacation: "montagne",
@@ -173,11 +173,11 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Chloé",
+    name: "Elisa",
     email: 'test6@test.test',
     password: '123456',
     age: 24,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705729/scale-11_panyul.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134856/IMG_6186_p5yli6.png",
     language: ["Français", "Espagnol"].join(' '),
     mood: "drink",
     vacation: "city",
@@ -186,11 +186,11 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Mateo",
+    name: "Paul",
     email: 'test7@test.test',
     password: '123456',
     age: 29,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-2_vtnc6t.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134861/IMG_6196_nccxha.png",
     language: ["Espagnol", "Français"].join(' '),
     mood: "cosy",
     vacation: "forêt",
@@ -199,11 +199,11 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Yuki",
+    name: "Baudouin",
     email: 'test8@test.test',
     password: '123456',
     age: 31,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134859/IMG_6181_gx02i8.png",
     language: ["Japonais", "Anglais"].join(' '),
     mood: "museum",
     vacation: "city",
@@ -212,11 +212,11 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Lara",
+    name: "Milena",
     email: 'test9@test.test',
     password: '123456',
     age: 25,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-9_sb7sms.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134866/IMG_6203_w0geku.png",
     language: ["Français", "Allemand", "Anglais"].join(' '),
     mood: "party_night",
     vacation: "plage",
@@ -225,11 +225,11 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Sofia 🇪🇸",
+    name: "Antoine 🇪🇸",
     email: "sofia@test.test",
     password: "123abc",
     age: 24,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_3.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134857/IMG_6176_nqgivt.png",
     language: ["Espagnol", "Anglais"].join(' '),
     mood: "cosy",
     vacation: "plage",
@@ -238,11 +238,11 @@ users = [
     friends_distance: 20
   },
   {
-    name: "Noah 🇩🇪",
+    name: "Paul 🇩🇪",
     email: "noah@test.test",
     password: "securepass",
     age: 27,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_4.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134854/IMG_6173_ketgik.png",
     language: ["Allemand", "Anglais"].join(' '),
     mood: "party_night",
     vacation: "forêt",
@@ -250,25 +250,25 @@ users = [
     friends_age: 25,
     friends_distance: 35
   },
+  # {
+  #   name: "Olivia 🇨🇦",
+  #   email: "olivia@test.test",
+  #   password: "mypassword",
+  #   age: 28,
+  #   avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134856/IMG_6186_p5yli6.png",
+  #   language: ["Français", "Anglais"].join(' '),
+  #   mood: "museum",
+  #   vacation: "lac",
+  #   life_choice: "travail",
+  #   friends_age: 27,
+  #   friends_distance: 50
+  # },
   {
-    name: "Olivia 🇨🇦",
-    email: "olivia@test.test",
-    password: "mypassword",
-    age: 28,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_5.png",
-    language: ["Français", "Anglais"].join(' '),
-    mood: "museum",
-    vacation: "lac",
-    life_choice: "travail",
-    friends_age: 27,
-    friends_distance: 50
-  },
-  {
-    name: "Mia 🇮🇹",
+    name: "Santiana 🇮🇹",
     email: "mia@test.test",
     password: "pass123",
     age: 29,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_7.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134751/IMG_6178_kgc0m3.png",
     language: ["Italien", "Français"].join(' '),
     mood: "drink",
     vacation: "plage",
@@ -277,11 +277,11 @@ users = [
     friends_distance: 45
   },
   {
-    name: "Benjamin 🇧🇷",
+    name: "Micka 🇧🇷",
     email: "benjamin@test.test",
     password: "letmein",
     age: 25,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_8.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134726/IMG_6195_ekteow.png",
     language: ["Portugais", "Espagnol"].join(' '),
     mood: "party_night",
     vacation: "city",
@@ -290,31 +290,32 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Ali 🇲🇦",
+    name: "Emilie 🇲🇦",
     email: "ali@test.test",
     password: "desert2024",
     age: 31,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_14.png",
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134725/IMG_6171_qplnyp.png",
     language: ["Arabe", "Français"].join(' '),
     mood: "cosy",
     vacation: "montagne",
     life_choice: "famille",
     friends_age: 30,
     friends_distance: 50
-  },
-  {
-    name: "Tatiana 🇷🇺",
-    email: "tatiana@test.test",
-    password: "russia2024",
-    age: 29,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_25.png",
-    language: ["Russe", "Anglais"].join(' '),
-    mood: "museum",
-    vacation: "forêt",
-    life_choice: "argent",
-    friends_age: 28,
-    friends_distance: 40
   }
+  # },
+  # {
+  #   name: "Tatiana",
+  #   email: "tatiana@test.test",
+  #   password: "russia2024",
+  #   age: ,
+  #   avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134864/IMG_6192_z2ww0o.png",
+  #   language: ["Colombienne", "Anglais"].join(' '),
+  #   mood: "museum",
+  #   vacation: "forêt",
+  #   life_choice: "argent",
+  #   friends_age: 28,
+  #   friends_distance: 40
+  # }
 ]
 
 begin
