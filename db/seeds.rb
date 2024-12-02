@@ -114,29 +114,25 @@ users = [
     age: 23,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-9_sb7sms.png",
     language: ["Anglais", "Français"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "party_night",
+    vacation: "forêt",
+    life_choice: "travail",
     friends_age: 20,
     friends_distance: 50
-
   },
   {
     name: "Inès 🇲🇦",
     email: 'test2@test.test',
     password: '123456',
-    age: 30,
+    age: 25,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
     language: ["Arabe", "Français", "Anglais"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "museum",
+    vacation: "plage",
+    life_choice: "amour",
     friends_age: 20,
     friends_distance: 50
-
-
   },
-
   {
     name: "Lucas 🇫🇷",
     email: 'test3@test.test',
@@ -144,13 +140,11 @@ users = [
     age: 33,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-1_tghfv0.png",
     language: ["Français"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "drink",
+    vacation: "city",
+    life_choice: "famille",
     friends_age: 20,
     friends_distance: 50
-
-
   },
   {
     name: "Sophia 🇮🇹",
@@ -159,12 +153,11 @@ users = [
     age: 30,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705731/scale-10_ehgcud.png",
     language: ["Italien", "Anglais"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
+    mood: "cosy",
+    vacation: "plage",
+    life_choice: "travail",
     friends_age: 20,
-    life_choice: "Famille",
     friends_distance: 50
-
   },
   {
     name: "Amir",
@@ -173,13 +166,11 @@ users = [
     age: 28,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-6_s1bjnv.png",
     language: ["Hindi", "Anglais", "Français"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "party_night",
+    vacation: "montagne",
+    life_choice: "argent",
     friends_age: 20,
     friends_distance: 50
-
-
   },
   {
     name: "Chloé",
@@ -188,13 +179,11 @@ users = [
     age: 24,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732705729/scale-11_panyul.png",
     language: ["Français", "Espagnol"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "drink",
+    vacation: "city",
+    life_choice: "famille",
     friends_age: 20,
     friends_distance: 50
-
-
   },
   {
     name: "Mateo",
@@ -203,13 +192,11 @@ users = [
     age: 29,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704993/scale-2_vtnc6t.png",
     language: ["Espagnol", "Français"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "cosy",
+    vacation: "forêt",
+    life_choice: "amour",
     friends_age: 20,
     friends_distance: 50
-
-
   },
   {
     name: "Yuki",
@@ -218,12 +205,11 @@ users = [
     age: 31,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-8_bc3u1h.png",
     language: ["Japonais", "Anglais"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "museum",
+    vacation: "city",
+    life_choice: "travail",
     friends_age: 20,
     friends_distance: 50
-
   },
   {
     name: "Lara",
@@ -232,12 +218,102 @@ users = [
     age: 25,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/scale-9_sb7sms.png",
     language: ["Français", "Allemand", "Anglais"].join(' '),
-    mood: "Skincare avec des amis",
-    vacation: "Montagne",
-    life_choice: "Famille",
+    mood: "party_night",
+    vacation: "plage",
+    life_choice: "argent",
     friends_age: 20,
     friends_distance: 50
-
+  }
+  {
+    name: "Sofia 🇪🇸",
+    email: "sofia@test.test",
+    password: "123abc",
+    age: 24,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_3.png",
+    language: ["Espagnol", "Anglais"].join(' '),
+    mood: "cosy",
+    vacation: "plage",
+    life_choice: "famille",
+    friends_age: 22,
+    friends_distance: 20
+  },
+  {
+    name: "Noah 🇩🇪",
+    email: "noah@test.test",
+    password: "securepass",
+    age: 27,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_4.png",
+    language: ["Allemand", "Anglais"].join(' '),
+    mood: "party_night",
+    vacation: "forêt",
+    life_choice: "argent",
+    friends_age: 25,
+    friends_distance: 35
+  },
+  {
+    name: "Olivia 🇨🇦",
+    email: "olivia@test.test",
+    password: "mypassword",
+    age: 28,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_5.png",
+    language: ["Français", "Anglais"].join(' '),
+    mood: "museum",
+    vacation: "lac",
+    life_choice: "travail",
+    friends_age: 27,
+    friends_distance: 50
+  },
+  {
+    name: "Mia 🇮🇹",
+    email: "mia@test.test",
+    password: "pass123",
+    age: 29,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_7.png",
+    language: ["Italien", "Français"].join(' '),
+    mood: "drink",
+    vacation: "plage",
+    life_choice: "amour",
+    friends_age: 28,
+    friends_distance: 45
+  },
+  {
+    name: "Benjamin 🇧🇷",
+    email: "benjamin@test.test",
+    password: "letmein",
+    age: 25,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_8.png",
+    language: ["Portugais", "Espagnol"].join(' '),
+    mood: "party_night",
+    vacation: "city",
+    life_choice: "travail",
+    friends_age: 23,
+    friends_distance: 50
+  },
+  {
+    name: "Ali 🇲🇦",
+    email: "ali@test.test",
+    password: "desert2024",
+    age: 31,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_14.png",
+    language: ["Arabe", "Français"].join(' '),
+    mood: "cosy",
+    vacation: "montagne",
+    life_choice: "famille",
+    friends_age: 30,
+    friends_distance: 50
+  },
+  {
+    name: "Tatiana 🇷🇺",
+    email: "tatiana@test.test",
+    password: "russia2024",
+    age: 29,
+    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732704994/user_25.png",
+    language: ["Russe", "Anglais"].join(' '),
+    mood: "museum",
+    vacation: "forêt",
+    life_choice: "argent",
+    friends_age: 28,
+    friends_distance: 40
   }
 ]
 
