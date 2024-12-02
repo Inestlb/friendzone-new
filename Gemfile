@@ -8,6 +8,8 @@ gem "rails", "~> 7.1.5"
 gem "devise"
 
 gem "ostruct"
+gem "solid_cable"
+
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
