@@ -37,10 +37,10 @@
                 <% second_user = match.second_user %>
                 <% if first_user == current_user %>
                   <%= second_user.name %>
-                  <input type="checkbox" value=<%= second_user.id %>>
+                  <input type="checkbox" value=<%= second_user.id %>><br>
                 <% else %>
                   <%= first_user.name %>
-                  <input type="checkbox" value=<%= first_user.id %>>
+                  <input type="checkbox" value=<%= first_user.id %>><br>
                 <% end %>
               <% end %>
             </div>
