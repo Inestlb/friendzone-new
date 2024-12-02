@@ -1,29 +1,29 @@
 .all-events-cards {
   display: flex;
   flex-direction: column;
-  gap: 16px; /* Espacement entre les cartes */
+  gap: 16px;
   margin-top: 60px;
   margin-bottom: 40px;
 }
 
 .card-event {
   overflow: hidden;
-  background: #1d1544; /* Fond sombre */
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4); /* Ombre plus grande pour mieux faire ressortir les cartes */
-  border-radius: 12px; /* Légèrement plus arrondi */
+  background: #1d1544;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
   padding: 20px;
   color: white;
   display: flex;
   flex-direction: column;
-  gap: 12px; /* Espacement entre sections */
-  padding-left: 16px; /* Ajout de marge à gauche */
-  padding-right: 16px; /* Ajout de marge à droite */
-  transition: box-shadow 0.3s ease-in-out; /* Animation sur hover pour plus d'interactivité */
-  border: 1px solid rgba(133, 118, 255, 0.3); /* Bord léger en light purple avec transparence */
+  gap: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: box-shadow 0.3s ease-in-out;
+  border: 1px solid rgba(133, 118, 255, 0.3);
 }
 
 .card-event:hover {
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6); /* Augmenter l'ombre au survol */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
 }
 
 .card-event > img {
@@ -31,21 +31,21 @@
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 12px; /* Espacement sous l'image */
+  margin-bottom: 12px
 }
 
 .card-event-infos {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%; /* Assurez-vous que tout l'espace horizontal est utilisé */
+  width: 100%;
 }
 
 .card-event-details {
   display: flex;
   flex-direction: column;
-  gap: 8px; /* Petit espacement entre les textes */
-  flex: 1; /* Laisser le plus d'espace possible pour les détails */
+  gap: 8px;
+  flex: 1;
 }
 
 .card-event-details h2 {
@@ -63,12 +63,12 @@
 }
 
 .card-event-date {
-  color: #8576FF !important; /* Bleu pour la date */
+  color: #8576FF !important;
   font-weight: bold;
 }
 
 .card-event-location {
-  color: #aaaaaa; /* Gris pour le lieu */
+  color: #aaaaaa;
   font-size: smaller;
 }
 
@@ -77,26 +77,26 @@
   font-weight: bold;
   color: white;
   text-align: right;
-  align-self: flex-end; /* Aligner à droite */
-  white-space: nowrap; /* Eviter que le texte se divise sur plusieurs lignes */
-  min-width: 60px; /* Largeur minimale pour éviter que le prix ne soit coupé */
-  padding-left: 10px; /* Un petit espace à gauche pour le prix */
-  margin-top: 8px; /* Ajout d'un petit espace en haut pour éviter que le prix soit trop proche du texte */
+  align-self: flex-end;
+  white-space: nowrap;
+  min-width: 60px;
+  padding-left: 10px;
+  margin-top: 8px;
 }
 .buttons {
   display: flex;
-  justify-content: center; /* Centre les boutons horizontalement */
-  gap: 20px; /* Espace entre les boutons */
+  justify-content: center;
+  gap: 20px;
   margin-top: 20px;
 }
 
-/* Style commun aux boutons */
-.buttons .btn-see-more,
+
+.buttons .btn-join,
 .buttons .btn-share {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px; /* Taille légèrement réduite */
-  border-radius: 8px; /* Border-radius plus faible */
+  padding: 8px 16px;
+  border-radius: 8px;
   background-color: #8576FF;
   color: #ffffff;
   text-decoration: none;
@@ -104,14 +104,12 @@
   transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Icônes dans les boutons */
-.buttons .btn-see-more i,
+.buttons .btn-join i,
 .buttons .btn-share i {
   margin-right: 8px;
 }
 
-/* Effet au survol */
-.buttons .btn-see-more:hover,
+.buttons .btn-join:hover,
 .buttons .btn-share:hover {
   background-color: #6a5acd;
   transform: translateY(-2px);

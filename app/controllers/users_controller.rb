@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, except: [:index]
 
   def index
-    @users = User.where.not(id: current_user) # Récupère tous les utilisateurs dans la base
+    @users = User.where.not(id: current_user)
   end
 
   def edit_mood

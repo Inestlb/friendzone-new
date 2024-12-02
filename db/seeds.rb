@@ -223,7 +223,7 @@ users = [
     life_choice: "argent",
     friends_age: 20,
     friends_distance: 50
-  }
+  },
   {
     name: "Sofia 🇪🇸",
     email: "sofia@test.test",
