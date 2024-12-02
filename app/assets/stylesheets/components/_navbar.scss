@@ -20,7 +20,8 @@
   justify-content: center;  /* Centrer horizontalement */
   align-items: center;  /* Centrer verticalement */
   flex-grow: 1;  /* Prendre toute la largeur restante */
-  margin-left: 25%; /* Décale le logo vers la droite */
+  margin-left: auto;
+  margin-right: auto; /* Décale le logo vers la droite */
 }
 
 /* Logo : ajustement de la taille */
@@ -41,7 +42,9 @@
 /* Style du lien "Log out" */
 .logout { /* Fond transparent */
   color: white;  /* Texte en blanc */
-  font-size: 16px;
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 13px;
 }
 
 /* Style au survol du lien */

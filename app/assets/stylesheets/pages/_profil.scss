@@ -1,5 +1,4 @@
 
-
 .profile-container {
   width: 100%;
   margin: auto;
@@ -7,19 +6,19 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   overflow-y: auto;
-  background-color: white;
+  background-color: #161032;
   border-radius: 1.5rem;
   padding: 1.4rem;
 }
 
 .avatar {
-  width: 160px;
-  height: 160px;
-  background-color: #e0e0e0;
+  width: 110px;
+  height: 110px;
+  background-color: #161032;
   border-radius: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
   margin: auto;
   font-size: 50px;
   color: #6af6a2;
@@ -32,14 +31,16 @@
 }
 
 .name {
-  font-size: 19px;
+  font-size: 22px;
   font-weight: bold;
   font-family: "Inter", sans-serif;
   color: #6af6a2;
+  letter-spacing: 2px;
+  margin-top: 6px;
 }
 
 .age-language {
-  font-size: 16px;
+  font-size: 14px;
   color: #6af6a2;
   font-family: "Inter", sans-serif;
   margin-top: 10px;
