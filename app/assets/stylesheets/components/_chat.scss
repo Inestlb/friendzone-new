@@ -1,16 +1,11 @@
-.chat {
+
   // [...]
   .message {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     width: 100%;
-  }
-
-  .message-info {
-    opacity: 0.5;
-    text-align: center;
-    width: fit-content;
+    
   }
 
   .message-content {
@@ -22,14 +17,31 @@
     word-wrap: break-word;
   }
 
+  .message-info {
+    opacity: 0.5;
+    text-align: center;
+    width: fit-content;
+  }
+
+
   .message.sent .message-content {
     align-self: flex-start;
-    background: $blue;
+    background: $light-purple;
     color: $light-gray;
   }
 
   .message.received .message-content {
     align-self: flex-end;
-    background: $gray-200;
+    background: $dark-purple;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 1);
+    border: 3px solid rgba(133, 118, 255, 0.3);
   }
-}
+
+  .text-area{
+    color:$light-purple;
+  }
+
+  .btn-green {
+    background-color: #6af6a2;
+    border: #6af6a2;
+  }

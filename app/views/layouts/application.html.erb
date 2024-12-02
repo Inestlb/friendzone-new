@@ -11,7 +11,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body data-current-user-id="<%= current_user ? current_user.id : "" %>">
     <!-- Afficher la navbar sauf pour les actions spécifiques -->
     <% unless controller_name == "pages" && action_name == "home" || controller_name == "sessions" || controller_name == "registrations" %>
       <%= render "shared/navbar" %>
@@ -21,5 +21,6 @@
 
     <!-- Afficher le footer sauf pour les contrôleurs et actions spécifiés -->
     <%= render 'shared/footer' unless controller_name == "pages" && action_name == "home" || controller_name == "sessions" || controller_name == "registrations" %>
+
   </body>
 </html>
