@@ -2,12 +2,14 @@
   <div class="container-fluid">
     <!-- Logo centré et déplacé vers la droite -->
     <div class="logo-container">
+      <%= link_to profil_path do %>
       <img src="<%= asset_path 'logo_friendzone.png' %>" alt="Logo Friendzone" class="img_navbar">
+      <% end %>
     </div>
 
     <!-- Liens (Log out) à droite -->
     <div class="navbar-nav ms-auto bebas-neue-regular">
-      <a href="<%= destroy_user_session_path %>" data-turbo-method="delete" class="log-out-link">Log out</a>
+      <a href="<%= destroy_user_session_path %> class:"logout" " data-turbo-method="delete" i class="fa-solid fa-right-to-bracket"></a>
     </div>
   </div>
 </div>
