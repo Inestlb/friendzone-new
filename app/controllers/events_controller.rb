@@ -5,4 +5,25 @@ class EventsController < ApplicationController
     @user = current_user
     @user_events = @user.events
   end
+
+  def send_event
+    @event = Event.find(params[:id])
+    send_event_params[:match_ids].each do |id|
+      next if id == ""
+      
+      match = Match.find(id)
+      Message.create(
+        match: match,
+        user: current_user,
+        content: "Je participe à cet event: #{@event.title}, ca te dis de venir ?"
+      )
+    end
+    redirect_to events_path
+  end
+
+  private
+
+  def send_event_params
+    params.require(:send_event).permit(match_ids: [])
+  end
 end
