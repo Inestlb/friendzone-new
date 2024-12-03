@@ -40,7 +40,14 @@ class User < ApplicationRecord
     matches_as_first_user + matches_as_second_user
   end
 
-  # def method_name
-  #   all_matches
-  # end
+
+  def suggested_profiles
+    User.where.not(id: self.id)
+    #.where.not(id: likes.pluck(:liked_user_id))
+    .where(
+      "mood = :mood OR vacation = :vacation OR life_choice = :life_choice",
+      mood: mood, vacation: vacation, life_choice: life_choice
+    )
+    
+  end
 end

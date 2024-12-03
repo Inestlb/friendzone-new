@@ -10,6 +10,7 @@ body {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  overflow: hidden;
 }
 
 /* Style pour l'image de fond avec transparence */
@@ -29,20 +30,48 @@ body {
 .text {
   z-index: 1;
   position: relative;
-  padding: 20px;
+  //padding: 20px;
+  margin-top: 3px;
 }
 
 .text h1 img {
   max-width: 100%;  /* Limite la largeur de l'image à la taille du parent */
   height: auto;     /* Garde les proportions de l'image */
   display: block;   /* Bloque l'image pour éviter l'alignement horizontal */
-  margin: 0 auto;   /* Centrer l'image */
+  margin: 0 auto;
+  //margin-bottom: 120px;
+  margin-top:-30px ;
+   /* Centrer l'image */
+}
+
+.page-content {
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-out {
+  opacity:0;
+}
+
+.sign-in-content {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.slogan {
+  margin-top: 50px;
 }
 
 .text h1,
 .text h2 {
   margin: 0;
-  padding: 10px;
+  padding: 2px;
+  font-family: "Bebas Neue", sans-serif;
+  //margin-bottom: 100px;
 }
 
 /* Style pour les boutons */
