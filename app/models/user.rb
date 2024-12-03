@@ -39,4 +39,8 @@ class User < ApplicationRecord
   def all_matches
     matches_as_first_user + matches_as_second_user
   end
+
+  # def method_name
+  #   all_matches
+  # end
 end
