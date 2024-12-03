@@ -1,40 +1,58 @@
 <div class="all-events-cards">
   <% @events.each do |event| %>
     <div class="card-event inter-regular">
-      <!-- Image de l'événement -->
       <img src="<%= event.image_url %>" alt="<%= event.title %>" />
 
-      <!-- Informations principales -->
       <div class="card-event-infos">
         <div class="card-event-details inter-regular">
-          <!-- Titre -->
           <h2><%= event.title %></h2>
-          <!-- Description -->
           <p class="card-event-description"><%= event.description %></p>
-          <!-- Date -->
           <p class="card-event-date"><%= event.date.strftime("%B, %d %Y") %></p>
-          <!-- Lieu -->
           <p class="card-event-location"><%= event.location %></p>
         </div>
 
-        <!-- Prix -->
         <h2 class="card-event-pricing inter-regular"><%= event.price %> €</h2>
       </div>
 
-      <!-- Boutons -->
       <div class="buttons">
-        <!-- Bouton "See more" -->
-        <%= link_to event_path(event), class: "btn-see-more" do %>
-          <i class="fa-solid fa-eye" style="color: #ffffff;"></i> See more
-        <% end %>
+        <p class="btn-join" data-controller="join" data-action="click->join#click" data-events-target="JoinButton">
+          <i class="fa-solid fa-user" style="color: #ffffff;"></i> Join the event
+        </p>
 
-        <!-- Bouton "Share" -->
-        <%= link_to "#", class: "btn-share" do %>
+        <button type="button" class="btn-share" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Share
-        <% end %>
+        </button>
       </div>
 
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title bebas-neue-regular" id="exampleModalLabel">Who would you like to share this event with?</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <% current_user.all_matches.each do |match| %>
+                <% first_user = match.first_user %>
+                <% second_user = match.second_user %>
+                <% if first_user == current_user %>
+                  <%= second_user.name %>
+                  <input type="checkbox" value=<%= second_user.id %>><br>
+                <% else %>
+                  <%= first_user.name %>
+                  <input type="checkbox" value=<%= first_user.id %>><br>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="modal-footer">
+            <div class="button-event-container">
+              <button type="button" class="button-event bebas-neue-regular" style="padding: 8px 16px; font-size: 16px; flex: 1;">Close</button>
+              <button type="button" class="button-event bebas-neue-regular" style="padding: 8px 16px; font-size: 16px; flex: 1;">Share events</button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   <% end %>
 </div>
-

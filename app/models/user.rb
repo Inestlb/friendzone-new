@@ -40,6 +40,7 @@ class User < ApplicationRecord
     matches_as_first_user + matches_as_second_user
   end
 
+
   def suggested_profiles
     User.where.not(id: self.id)
     #.where.not(id: likes.pluck(:liked_user_id))
