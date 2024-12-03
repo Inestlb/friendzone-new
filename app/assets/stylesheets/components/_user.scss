@@ -11,9 +11,10 @@ body {
 
 h1 {
   font-family: 'Impact', sans-serif;
-  font-size: 1.8rem; /* Taille ajustée pour mobile */
-  margin-bottom: 10px;
+  font-size: 3.8rem; /* Taille ajustée pour mobile */
+  margin-bottom: 140px;
   text-transform: uppercase;
+  margin-top: -100px;
 }
 
 h1 span {
@@ -67,8 +68,10 @@ h1 span {
 /* Media Query pour très petits écrans */
 @media (max-width: 400px) {
   h1 {
-    font-size: 1.5rem; /* Réduction du titre pour petits écrans */
+    font-size: 1.7rem; /* Réduction du titre pour petits écrans */
     text-align: center;
+    letter-spacing: 2px;
+    // font-family: "Bebas Neue", sans-serif;
   }
 
   .subtitle {
@@ -86,5 +89,15 @@ h1 span {
 
   .option-label {
     font-size: 0.7rem;
+  }
+
+  .next-btn{
+    background-color: #8576FF;
+    border-radius: 30px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-family: "Impact", sans-serif;
+    padding: 6px 32px;
+    letter-spacing: 2px;
   }
 }

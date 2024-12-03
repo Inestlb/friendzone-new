@@ -20,12 +20,13 @@
   justify-content: center;  /* Centrer horizontalement */
   align-items: center;  /* Centrer verticalement */
   flex-grow: 1;  /* Prendre toute la largeur restante */
-  margin-left: 25%; /* Décale le logo vers la droite */
+  margin-left: auto;
+  margin-right: auto; /* Décale le logo vers la droite */
 }
 
 /* Logo : ajustement de la taille */
 .img_navbar {
-  height: 50px;  /* Ajuste la hauteur du logo */
+  height: 60px;  /* Ajuste la hauteur du logo */
   object-fit: contain;  /* Garde la proportion du logo */
 }
 
@@ -39,21 +40,15 @@
 }
 
 /* Style du lien "Log out" */
-.log-out-link {
-  display: inline-flex;
-  align-items: center;  /* Centrer le texte dans le lien */
-  padding: 5px 10px;  /* Réduit le padding pour rendre le lien plus compact */
-  background-color: transparent;  /* Fond transparent */
+.logout { /* Fond transparent */
   color: white;  /* Texte en blanc */
-  border: none;
-  border-radius: 8px;  /* Coins arrondis */
-  font-size: 16px;
-  text-decoration: none;  /* Enlever la décoration de lien */
-  transition: background-color 0.3s ease;  /* Animation de transition pour le survol */
+  font-size: 13px;
+  text-decoration: none;
+  margin-bottom: 13px;
 }
 
 /* Style au survol du lien */
-.log-out-link:hover {
+.logout :hover {
   background-color: #4da75f;  /* Fond plus sombre au survol */
 }
 

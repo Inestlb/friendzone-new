@@ -1,13 +1,20 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <!-- Logo centré et déplacé vers la droite -->
-    <div class="logo-container">
-      <img src="<%= asset_path 'logo_friendzone.png' %>" alt="Logo Friendzone" class="img_navbar">
-    </div>
-
-    <!-- Liens (Log out) à droite -->
-    <div class="navbar-nav ms-auto bebas-neue-regular">
-      <a href="<%= destroy_user_session_path %>" data-turbo-method="delete" class="log-out-link">Log out</a>
+    <!-- Conteneur pour centrer le logo -->
+    <div class="d-flex w-100 align-items-center justify-content-center position-relative">
+      <div class="position-absolute start-0 ms-auto">
+        <!-- Placeholder pour aligner Logout à droite -->
+      </div>
+      <!-- Logo centré -->
+      <div class="logo-container">
+        <%= link_to profil_path do %>
+          <img src="<%= asset_path 'logo_friendzone.png' %>" alt="Logo Friendzone" class="img_navbar">
+        <% end %>
+      </div>
+      <!-- Logout à droite -->
+      <div class="position-absolute end-0">
+        <a href="<%= destroy_user_session_path %> " data-turbo-method="delete" class="logout bebas-neue-regular">Log Out</a>
+      </div>
     </div>
   </div>
 </div>
