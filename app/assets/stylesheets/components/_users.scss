@@ -10,28 +10,15 @@
 
 }
 
-.avatar {
-  width: 160px;
-  height: 160px;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  font-size: 50px;
-  color: #6c757d;
-}
-
 .stats-container {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: flex-end;
-  background-color: #f8f9fa;
+  // background-color: #f8f9fa;
   padding: 15px;
   border-radius: 15px;
-  margin: 20px 0;
-  color:#333;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .stats-container div {
@@ -41,12 +28,12 @@
 
 .stats-container div p {
   margin: 0;
-  font-size: 1.2rem;
+  // font-size: 1.2rem;
   font-weight: bold;
 }
 
 .stats-container div small {
-  display: block;
+  // display: block;
   font-size: 0.9rem;
   color: #6c757d;
 }
@@ -84,6 +71,8 @@
 .events-container h5 {
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
+  color: white;
 }
 
 .event-item {
@@ -108,17 +97,17 @@
   color: #333;
 }
 
-.event-icon.event1 {
-  background-color: $green;
-}
+// .event-icon.event1 {
+//   background-color: $green;
+// }
 
-.event-icon.event2 {
-  background-color: #4dabf7;
-}
+// .event-icon.event2 {
+//   background-color: #4dabf7;
+// }
 
-.event-icon.event3 {
-  background-color: #4dabf7;
-}
+// .event-icon.event3 {
+//   background-color: #4dabf7;
+// }
 
 .about {
   text-align: left;

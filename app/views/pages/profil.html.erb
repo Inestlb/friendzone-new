@@ -1,8 +1,8 @@
  <div class="profile-container">
   <!-- Profil Header -->
   <div class="profile-header">
-    <div class="avatar">
-      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100", alt: "Avatar de #{@user.name}" %>
+    <div class="avatar-profil">
+      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
     </div>
     <div class="name">
       <strong><%= @user.name %></strong>
@@ -12,31 +12,32 @@
   <!-- Stats Section -->
   <div class="stats-container">
     <div class="stats-item">
-      <p>Paris</p>
-      <small>City</small>
+      <p><%= @user.age  %></p>
+      <%# <small>Âge</small> %>
     </div>
     <div class="stats-item">
-      <p><%= @user.age %></p>
-      <small>Âge</small>
+      <p>Paris</p>
+      <%# <small>City</small> %>
     </div>
     <div class="stats-item">
       <p><%= @user.language || "Anglais" %></p>
-      <small>Langues</small>
+      <%# <small>Langues</small> %>
     </div>
   </div>
 
   <!-- Réponses Section -->
-  <h5 class="section-title">Réponses</h5>
+  <%# <h5 class="section-title mt-0">Réponses</h5> %>
   <div class="answers">
     <%= image_tag 'https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg', alt: 'cosy' %>
     <%= image_tag 'https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg', alt: 'foret' %>
     <%= image_tag 'https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg', alt: 'Cocktail' %>
-    <%= image_tag 'https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop', alt: 'Voyage' %>
   </div>
 
   <!-- Events Section -->
+    <div class= "events-title">
+      <h5>Évènements</h5>
+    </div>
   <div class="events-container">
-    <h5>Évènements</h5>
     <div class="event-item">
       <div class="event-icon event1"></div>
       <p class="event-text">Beach-Volley à Pantin</p>
