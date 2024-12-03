@@ -1,11 +1,37 @@
 <div class="swiper w-100" data-controller="swipe coordinates">
     <div class="swiper__content">
       <div class="swiper__card-cont">
-        <% @users.each do |user| %>
+        <% @users.each do |profile| %>
 
-          <div class="swiper__card "
+           <%
+              mood_url = case profile.mood
+              when "cosy" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg"
+              when "drink" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
+              when "party_night" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg"
+              when "museum" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
+              end
+            %>
+
+          <%
+              vacation_url = case profile.vacation
+              when "montagne" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg"
+              when "plage" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg"
+              when "city" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg"
+              when "forêt" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
+              end
+           %>
+
+          <%
+              life_choice_url = case profile.life_choice
+              when "famille" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg"
+              when "amour" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg"
+              when "argent" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg"
+              when "travail" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg"
+              end
+          %>
+                      <div class="swiper__card "
                data-swipe-target="card"
-               data-id="<%= user.id %>"
+               data-id="<%= profile.id %>"
                data-current="<%= current_user.id %>">
             <div class="swiper__card__content">
 
@@ -13,12 +39,12 @@
 								<%# La partie du haut de la carte %>
               </div>
                 <div class="avatar mb-2">
-                <%= cl_image_tag user.avatar_url, class: 'swiper__card__img' %>
+                <%= cl_image_tag profile.avatar_url, class: 'swiper__card__img' %>
                 </div>
 
             <!-- Name -->
                 <div class="name mt-2">
-                  <h2><%= user.name %></h2>
+                  <h2><%= profile.name %></h2>
                 </div>
             <!--info Section -->
               <div class="stats-container">
@@ -27,11 +53,11 @@
                   <small>Distance</small>
                 </div>
                 <div class="stats-item">
-                  <p><%= user.age %></p>
+                  <p><%= profile.age %></p>
                   <small>Âge</small>
                 </div>
                 <div class="stats-item">
-                  <p><%= user.language %></p>
+                  <p><%= profile.language %></p>
                   <small>Langues</small>
                 </div>
               </div>
@@ -44,28 +70,21 @@
                     <!-- Image 1 -->
                     <div class="col-4 col-md-3">
                       <div class="h-100">
-                        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
-                            class="img-fluid"
-                            alt="Fête"
-                            style="border-radius: 10px; height: 120px; width: 100px">
+                        <%= image_tag mood_url, class: "img-fluid", alt: profile.mood, style: "border-radius: 10px; height: 120px; width: 100px" %>
                       </div>
                     </div>
                     <!-- Image 2 -->
                     <div class="col-4 col-md-3">
                       <div class="h-100">
-                        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
-                            class="img-fluid"
-                            alt="Parachutisme"
-                            style="border-radius: 10px; height: 120px; width: 100px">
+                      <%= image_tag vacation_url, class: "img-fluid", alt: profile.vacation, style: "border-radius: 10px; height: 120px; width: 100px" %>
+
                       </div>
                     </div>
                     <!-- Image 3 -->
                     <div class="col-4 col-md-3">
                       <div class="h-100">
-                        <img src="https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg"
-                            class="img-fluid"
-                            alt="Cocktail"
-                            style="border-radius: 10px; height: 120px; width: 100px">
+                      <%= image_tag life_choice_url, class: "img-fluid", alt: profile.life_choice, style: "border-radius: 10px; height: 120px; width: 100px" %>
+
                       </div>
                     </div>
                     <!-- Image 4 -->
