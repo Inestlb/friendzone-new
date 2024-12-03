@@ -30,8 +30,8 @@ life_choice_url = case current_user.life_choice
  <div class="profile-container">
   <!-- Profil Header -->
   <div class="profile-header">
-    <div class="avatar">
-      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100", alt: "Avatar de #{@user.name}" %>
+    <div class="avatar-profil">
+      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
     </div>
     <div class="name">
       <strong><%= @user.name %></strong>
@@ -41,21 +41,21 @@ life_choice_url = case current_user.life_choice
   <!-- Stats Section -->
   <div class="stats-container-profil">
     <div class="stats-item">
-      <p>Paris</p>
-      <small>City</small>
+      <p><%= @user.age  %></p>
+      <%# <small>Âge</small> %>
     </div>
     <div class="stats-item">
-      <p><%= @user.age %></p>
-      <small>Âge</small>
+      <p>Paris</p>
+      <%# <small>City</small> %>
     </div>
     <div class="stats-item">
       <p><%= @user.language || "Anglais" %></p>
-      <small>Langues</small>
+      <%# <small>Langues</small> %>
     </div>
   </div>
 
   <!-- Réponses Section -->
-  <h5 class="section-title">Réponses</h5>
+  <%# <h5 class="section-title mt-0">Réponses</h5> %>
   <div class="answers">
 
     <%= image_tag mood_url, alt: current_user.mood %>
@@ -65,8 +65,10 @@ life_choice_url = case current_user.life_choice
   </div>
 
   <!-- Events Section -->
+    <div class= "events-title">
+      <h5>Évènements</h5>
+    </div>
   <div class="events-container">
-    <h5>Évènements</h5>
     <div class="event-item">
       <div class="event-icon event1"></div>
       <p class="event-text">Beach-Volley à Pantin</p>

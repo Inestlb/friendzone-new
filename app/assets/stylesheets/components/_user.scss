@@ -6,7 +6,7 @@ body {
   max-width: 100%; /* Utilisation de tout l'espace disponible */
   margin: auto;
   text-align: center;
-  padding: 20px 10px; /* Réduction des marges pour les petits écrans */
+  padding: 20px 0px; /* Réduction des marges pour les petits écrans */
 }
 
 h1 {
@@ -99,5 +99,15 @@ h1 span {
     font-family: "Impact", sans-serif;
     padding: 6px 32px;
     letter-spacing: 2px;
+  }
+}
+
+.swiper-custom-container {
+  padding: 0 !important;
+}
+
+.name {
+  h2 {
+    font-family: 'Impact', sans-serif;
   }
 }
