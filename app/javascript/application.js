@@ -23,4 +23,3 @@ const csrfToken = () => {
 window.csrfToken      = csrfToken
 window.fetchWithToken = fetchWithToken
 window.swiper = Swiper
-console.log(window.swiper)
