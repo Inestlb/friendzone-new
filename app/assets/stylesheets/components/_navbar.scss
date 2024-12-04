@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center; /* Centrer tous les éléments horizontalement */
   align-items: center;  /* Centrer les éléments verticalement */
-  background-color: $dark-purple;
+  background-color: #090510;
   height: 70px;  /* Ajustez la hauteur de la navbar */
   padding: 0 10px;  /* Réduit l'espace intérieur global */
   position: fixed;
@@ -11,7 +11,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  border-bottom: 0.2px solid black;
+  border-bottom: 0.2px solid #090510;
 }
 
 /* Container pour le logo, décalé légèrement vers la droite */
