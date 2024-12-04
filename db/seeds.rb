@@ -1,6 +1,5 @@
 require "open-uri"
 
-
 Event.all.each do |event|
   event.photo.purge if event.photo.attached?
 end
