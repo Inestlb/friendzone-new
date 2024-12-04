@@ -93,7 +93,7 @@ export default class extends Controller {
       <h5 class="text-center">🎉 Match Réussi ! 🎉</h5>
       <p>${json.message}</p>
       <div class="d-flex justify-content-end mt-3">
-        <button class="btn btn-primary me-2" onclick="window.location.href='/matches/${this.cardTarget.dataset.id}'">Discuter</button>
+        <button class="btn btn-primary me-2" onclick="window.location.href='/matches/${json.match_id}'">Discuter</button>
         <button class="btn btn-secondary" data-bs-dismiss="modal">Continuer à matcher</button>
       </div>
     `

@@ -6,11 +6,13 @@
   margin-bottom: 40px;
   padding-bottom: 58px;
   padding-top: 158px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .card-event {
   overflow: hidden;
-  background: #1d1544;
+  background: #090510;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
   border-radius: 12px;
   padding: 20px;
@@ -117,7 +119,7 @@
 
 .buttons .btn-join.green {
   background-color: #6af6a2;
-  color: $dark-purple;
+  color: #090510;
   letter-spacing: 1px;
   border: none;
   border-radius: 50px;
