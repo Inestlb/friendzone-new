@@ -1,40 +1,8 @@
- <%
-  mood_url = case current_user.mood
-  when "cosy" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg"
-  when "drink" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
-  when "party_night" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg"
-  when "museum" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
-  else nil
-  end
-%>
-
-<%
-  vacation_url = case current_user.vacation
-  when "montagne" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg"
-  when "plage" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg"
-  when "city" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg"
-  when "forêt" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
-  else nil
-  end
-%>
-
-<%
-life_choice_url = case current_user.life_choice
-  when "famille" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg"
-  when "amour" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg"
-  when "argent" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg"
-  when "travail" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg"
-  else nil
-  end
-%>
-
-
-
  <div class="profile-container">
   <!-- Profil Header -->
   <div class="profile-header">
-    <div class="avatar-profil-green">
-      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
+    <div class="avatar-profil">
+      <%= image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
     </div>
     <div class="name">
       <strong><%= @user.name %></strong>
@@ -60,10 +28,9 @@ life_choice_url = case current_user.life_choice
   <!-- Réponses Section -->
   <%# <h5 class="section-title mt-0">Réponses</h5> %>
   <div class="answers">
-    <%= image_tag mood_url, alt: current_user.mood unless mood_url.nil? %>
-    <%= image_tag life_choice_url, alt: current_user.mood unless life_choice_url.nil? %>
-    <%= image_tag vacation_url, alt: current_user.mood unless vacation_url.nil? %>
-
+    <%= image_tag "flashcard_mood_#{current_user.mood}", alt: current_user.mood unless current_user.mood.nil? %>
+    <%= image_tag "flashcard_interest_#{current_user.life_choice}", alt: current_user.life_choice unless current_user.life_choice.nil? %>
+    <%= image_tag "flashcard_vacances_#{current_user.vacation}", alt: current_user.vacation %>
   </div>
 
   <!-- Events Section -->

@@ -1,5 +1,8 @@
 require "open-uri"
 
+Event.all.each do |event|
+  event.photo.purge if event.photo.attached?
+end
 Event.destroy_all
 Like.destroy_all
 Match.destroy_all
@@ -101,8 +104,10 @@ events_data.each do |event_data|
     file = URI.open(event_data[:image_url])
     event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png")
 end
-puts "Seed terminée avec succès"
 
+User.all.each do |user|
+  user.avatar.purge if user.avatar.attached?
+end
 puts "Deleting old users..."
 User.destroy_all
 puts "Creating users..."
@@ -113,10 +118,10 @@ users = [
     email: 'test1@test.test',
     password: '123456',
     age: 23,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134724/IMG_6150_jojyqa.png",
-    language: ["English", "French"].join(' '),
+    avatar_url: "rousselot.jpg",
+    language: ["Anglais", "Français"].join(' '),
     mood: "party_night",
-    vacation: "forêt",
+    vacation: "foret",
     life_choice: "travail",
     friends_age: 20,
     friends_distance: 50
@@ -139,8 +144,8 @@ users = [
     email: 'test3@test.test',
     password: '123456',
     age: 33,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134864/IMG_6192_z2ww0o.png",
-    language: ["French"].join(' '),
+    avatar_url: "ilan.jpg",
+    language: ["Français"].join(' '),
     mood: "drink",
     vacation: "city",
     life_choice: "famille",
@@ -165,8 +170,8 @@ users = [
     email: 'test5@test.test',
     password: '123456',
     age: 28,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134862/IMG_6201_puog02.png",
-    language: ["Hindi", "English", "French"].join(' '),
+    avatar_url: "pierre.jpg",
+    language: ["Hindi", "Anglais", "Français"].join(' '),
     mood: "party_night",
     vacation: "montagne",
     life_choice: "argent",
@@ -178,8 +183,8 @@ users = [
     email: 'test6@test.test',
     password: '123456',
     age: 24,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134856/IMG_6186_p5yli6.png",
-    language: ["French", "Spanish"].join(' '),
+    avatar_url: "elisa.jpg",
+    language: ["Français", "Espagnol"].join(' '),
     mood: "drink",
     vacation: "city",
     life_choice: "famille",
@@ -191,10 +196,10 @@ users = [
     email: 'test7@test.test',
     password: '123456',
     age: 29,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134861/IMG_6196_nccxha.png",
-    language: ["Spanish", "French"].join(' '),
+    avatar_url: "paul.jpg",
+    language: ["Espagnol", "Français"].join(' '),
     mood: "cosy",
-    vacation: "forêt",
+    vacation: "foret",
     life_choice: "amour",
     friends_age: 20,
     friends_distance: 50
@@ -204,7 +209,7 @@ users = [
     email: 'test8@test.test',
     password: '123456',
     age: 31,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134859/IMG_6181_gx02i8.png",
+    avatar_url: "baudouin.jpg",
     language: ["Japanese", "English"].join(' '),
     mood: "museum",
     vacation: "city",
@@ -217,7 +222,7 @@ users = [
     email: 'test9@test.test',
     password: '123456',
     age: 25,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134866/IMG_6203_w0geku.png",
+    avatar_url: "milena.jpg",
     language: ["French", "German", "English"].join(' '),
     mood: "party_night",
     vacation: "plage",
@@ -230,7 +235,7 @@ users = [
     email: "sofia@test.test",
     password: "123abc",
     age: 24,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134857/IMG_6176_nqgivt.png",
+    avatar_url: "antoine.jpg",
     language: ["Spanish", "English"].join(' '),
     mood: "cosy",
     vacation: "plage",
@@ -243,10 +248,10 @@ users = [
     email: "noah@test.test",
     password: "securepass",
     age: 27,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134854/IMG_6173_ketgik.png",
+    avatar_url: "pauul.jpg",
     language: ["German", "English"].join(' '),
     mood: "party_night",
-    vacation: "forêt",
+    vacation: "foret",
     life_choice: "argent",
     friends_age: 25,
     friends_distance: 35
@@ -269,7 +274,7 @@ users = [
     email: "mia@test.test",
     password: "pass123",
     age: 29,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134751/IMG_6178_kgc0m3.png",
+    avatar_url: "santiana.jpg",
     language: ["Italian", "French"].join(' '),
     mood: "drink",
     vacation: "plage",
@@ -282,7 +287,7 @@ users = [
     email: "benjamin@test.test",
     password: "letmein",
     age: 25,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134726/IMG_6195_ekteow.png",
+    avatar_url: "micka.jpg",
     language: ["Portuguese", "Spanish"].join(' '),
     mood: "party_night",
     vacation: "city",
@@ -295,7 +300,7 @@ users = [
     email: "ali@test.test",
     password: "desert2024",
     age: 31,
-    avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134725/IMG_6171_qplnyp.png",
+    avatar_url: "emilie.jpg",
     language: ["Arab", "French"].join(' '),
     mood: "cosy",
     vacation: "montagne",
@@ -318,10 +323,47 @@ users = [
   #   friends_distance: 40
   # }
 ]
+# flashcards = {
+#   mood: {
+#     cosy: Rails.root.join('app/assets/images/flashcard_mood.jpg').to_s,
+#     drink: Rails.root.join('app/assets/images/flashcard_mood_bar.jpg').to_s,
+#     party_night: Rails.root.join('app/assets/images/flashcard_mood_fete.jpg').to_s,
+#     museum: Rails.root.join('app/assets/images/flashcard_mood_musee.jpg').to_s
+#   },
+#   vacation: {
+#     montagne: Rails.root.join('app/assets/images/flashcard_vacances_montagne.jpg').to_s,
+#     plage: Rails.root.join('app/assets/images/flashcard_vacances_mer.jpg').to_s,
+#     city: Rails.root.join('app/assets/images/flashcard_vacances_ville.jpg').to_s,
+#     forêt: Rails.root.join('app/assets/images/flashcard_vacances_foret.jpg').to_s
+#   },
+#   life_choice: {
+#     famille: Rails.root.join('app/assets/images/flashcard_interest_famille.jpg').to_s,
+#     amour: Rails.root.join('app/assets/images/flashcard_interest_amour.jpg').to_s,
+#     argent: Rails.root.join('app/assets/images/flashcard_interest_money.jpg').to_s,
+#     travail: Rails.root.join('app/assets/images/flashcard_interest_pro_2.jpg').to_s
+#   }
+# }
 
 begin
   users.each do |user|
     new_user = User.new(user)
+    # file = URI.parse(user[:avatar_url]).open
+    # new_user.avatar.attach(io: file, filename: "#{new_user.name}.png", content_type: "image/png")
+
+    # gestion de mood, vacation, livechoice
+    # checker les keys correspondantes et attach la photo qui match avec
+    # mood_image = flashcards[:mood][new_user.mood.to_sym]
+    # file = File.open(mood_image)
+    # new_user.mood_image.attach(io: file, filename: mood_image, content_type: "image/jpg")
+
+    # vacation_image = flashcards[:vacation][new_user.vacation.to_sym]
+    # file = File.open(vacation_image)
+    # new_user.vacation_image.attach(io: file, filename: vacation_image, content_type: "image/jpg")
+
+    # life_image = flashcards[:life_choice][new_user.life_choice.to_sym]
+    # file = File.open(life_image)
+    # new_user.life_image.attach(io: file, filename: vacation_image, content_type: "image/jpg")
+
     if new_user.save
       puts "User #{new_user.name} created successfully!"
     else
@@ -334,3 +376,5 @@ rescue StandardError => e
   puts "An error occurred: #{e.message}"
 end
 puts "Users successfully created!"
+
+puts "Seed terminée avec succès"

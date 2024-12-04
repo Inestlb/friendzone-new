@@ -1,20 +1,20 @@
 <%
   image_url = case choice
-  when "cosy" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg"
-  when "drink" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
-  when "party_night" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg"
-  when "museum" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
-  when "montagne" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg"
-  when "plage" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg"
-  when "city" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg"
-  when "foret" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
-  when "famille" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg"
-  when "amour" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg"
-  when "argent" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg"
-  when "travail" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg"
+  when "cosy" then "flashcard_mood_#{choice}.jpg"
+  when "drink" then "flashcard_mood_#{choice}.jpg"
+  when "party_night" then "flashcard_mood_#{choice}.jpg"
+  when "museum" then "flashcard_mood_#{choice}.jpg"
+  when "montagne" then "flashcard_vacances_#{choice}.jpg"
+  when "plage" then "flashcard_vacances_#{choice}.jpg"
+  when "city" then "flashcard_vacances_#{choice}.jpg"
+  when "foret" then "flashcard_vacances_#{choice}.jpg"
+  when "famille" then "flashcard_interest_#{choice}.jpg"
+  when "amour" then "flashcard_interest_#{choice}.jpg"
+  when "argent" then "flashcard_interest_#{choice}.jpg"
+  when "travail" then "flashcard_interest_#{choice}.jpg"
   end
 %>
 
 <div class="choice-label">
-  <img src="<%= image_url %>" alt="<%= choice %>">
+  <%= image_tag image_url, alt: choice %>
 </div>
