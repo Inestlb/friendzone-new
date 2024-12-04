@@ -43,11 +43,9 @@ class User < ApplicationRecord
 
   def suggested_profiles
     User.where.not(id: self.id)
-    #.where.not(id: likes.pluck(:liked_user_id))
-    .where(
-      "mood = :mood OR vacation = :vacation OR life_choice = :life_choice",
-      mood: mood, vacation: vacation, life_choice: life_choice
-    )
-    
+              .where(
+                "mood = :mood OR vacation = :vacation OR life_choice = :life_choice",
+                mood: mood, vacation: vacation, life_choice: life_choice
+              )
   end
 end
