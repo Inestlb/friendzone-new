@@ -10,15 +10,16 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     send_event_params[:match_ids].each do |id|
       next if id == ""
-      
+
       match = Match.find(id)
       Message.create(
         match: match,
         user: current_user,
-        content: "Je participe à cet event: #{@event.title}, ca te dis de venir ?"
+        content: "I am participating to #{@event.title}, do you want to join me?"
       )
     end
-    redirect_to events_path
+    redirect_to events_path, alert: "Events succesfully shared!"
+
   end
 
   private
