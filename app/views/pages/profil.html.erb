@@ -43,14 +43,14 @@ life_choice_url = case current_user.life_choice
 
   <!-- Stats Section -->
   <div class="stats-container-profil">
-    <div class="stats-item-profil">
-      <i class="fa-solid fa-cake-candles icone-profil"></i> <p> <%= @user.age%> yrs</p>
-      <%# <small>Âge</small> %>
-    </div>
-    <div class="stats-item-profil">
-      <i class="fa-solid fa-location-dot icone-profil"></i> <p> Paris</p>
-      <%# <small>City</small> %>
-    </div>
+    <div class="grid-symp">
+      <div class="stats-item-profil">
+        <i class="fa-solid fa-cake-candles icone-profil"></i> <p> <%= @user.age%> yrs</p>
+      </div>
+      <div class="stats-item-profil">
+        <i class="fa-solid fa-location-dot icone-profil"></i> <p> Paris</p>
+      </div>
+  </div>
     <div class="stats-item-profil">
       <i class="fa-solid fa-comment icone-profil"></i><p> <%= @user.language || "Anglais" %></p>
       <%# <small>Langues</small> %>
@@ -68,7 +68,7 @@ life_choice_url = case current_user.life_choice
 
   <!-- Events Section -->
     <div class= "events-title-profile">
-      <h5>Évènements</h5>
+      <h5>Events</h5>
     </div>
   <div class="events-container-profil">
     <div class="event-item-profil">

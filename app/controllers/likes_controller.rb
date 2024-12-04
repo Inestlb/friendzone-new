@@ -31,10 +31,24 @@ class LikesController < ApplicationController
 
   def check_for_match(like)
     mate = User.find(like.liked_id)
+
+    # Vérifie si un match existe déjà
+    existing_match = Match.find_by(
+      first_user: mate,
+      second_user: current_user
+    ) || Match.find_by(
+      first_user: current_user,
+      second_user: mate
+    )
+
+    return existing_match if existing_match # Retourne le match existant si trouvé
+
+    # Vérifie si un "Like" réciproque existe
     if Like.find_by(liker: mate, liked: current_user, is_liked: true)
       return Match.create(first_user: mate, second_user: current_user)
-    else
-      return false
     end
+
+    false # Aucun match n'est créé
   end
+
 end
