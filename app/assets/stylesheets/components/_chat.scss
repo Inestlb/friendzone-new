@@ -1,18 +1,22 @@
 
   // [...]
+  .message-container {
+    margin-top: 300px;
+    width: 90%;
+  }
   .message {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     width: 100%;
-    
+
   }
 
   .message-content {
     border-radius: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     padding: 0.5rem;
-    max-width: 70%;
+    max-width: 90%;
     width: fit-content;
     word-wrap: break-word;
   }
@@ -25,23 +29,41 @@
 
 
   .message.sent .message-content {
-    align-self: flex-start;
+    align-self: flex-end;
     background: $light-purple;
     color: $light-gray;
   }
 
   .message.received .message-content {
-    align-self: flex-end;
+    align-self: flex-start;
     background: $dark-purple;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 1);
     border: 3px solid rgba(133, 118, 255, 0.3);
   }
 
-  .text-area{
-    color:$light-purple;
+  .text-area {
+    position: fixed;
+    bottom: 10%;
+    left: 2%;
+    width: 98%;
+    padding: 10px;
+    justify-content: center;
+}
+
+.text-area .form-control {
+    height: 37px;
+    margin-top: 0 !important;
+    margin-bottom: -10px;
+}
+
+
+  .text-area ::placeholder {
+    background-color: transparent; /* Fond transparent pour correspondre au design */
+    color: white !important; /* Texte en blanc */
+
   }
 
-  .btn-green {
-    background-color: #6af6a2;
-    border: #6af6a2;
+  .text-area .btn-green {
+    background-color: #6af6a2; /* Ajustez la couleur du bouton vert */
+    border: none;
   }

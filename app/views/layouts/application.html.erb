@@ -20,11 +20,15 @@
     <% unless controller_name == "pages" && action_name == "home" || controller_name == "sessions" || controller_name == "registrations" %>
       <%= render "shared/navbar" %>
     <% end %>
+    <%= render "shared/flashes" %>
 
     <%= yield %>
 
     <!-- Afficher le footer sauf pour les contrôleurs et actions spécifiés -->
     <%= render 'shared/footer' unless controller_name == "pages" && action_name == "home" || controller_name == "sessions" || controller_name == "registrations" %>
-
+    <script>
+      // on page turbo load, query selector flashes
+      // set timeout 3 seconds, remove flash
+    </script>
   </body>
 </html>
