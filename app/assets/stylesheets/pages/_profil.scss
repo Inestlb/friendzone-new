@@ -12,21 +12,6 @@
   padding-bottom: 8.5rem;
 }
 
-.avatar{
-  width: 110px;
-  height: 110px;
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 0;
-  font-size: 50px;
-  color: #6af6a2;
-  border: solid;
-  border-color: #6af6a2;
-}
-
 .user-details {
   display: flex;
   flex-direction: column;
@@ -142,7 +127,6 @@
 }
 
 .event-item-profil {
-  text-align: center;
   flex: 1;
   font-family: "Inter", sans-serif;
   border: solid;
@@ -150,8 +134,11 @@
   border-radius: 25px;
   margin: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 2px 20px;
+  padding: 10px 20px; /* Adjusted padding for better spacing */
+
+  /* Use flexbox to center content */
   display: flex;
+  justify-content: center; /* Horizontally centers the content */
   align-items: center;
 }
 
@@ -170,6 +157,7 @@
   font-family: "Inter", sans-serif;
   font-weight: bold;
   text-align: center;
+  margin: 0;
 }
 
 .events-title-profile {
