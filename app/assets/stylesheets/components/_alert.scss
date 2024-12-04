@@ -1,6 +1,23 @@
 .alert {
   position: fixed;
+  background-color: $green; /* Remplacez $green par une valeur couleur valide, ex: #28a745 */
+  color: $dark-purple; /* Remplacez $dark-purple par une valeur couleur valide, ex: #6c757d */
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  border: 1px solid $dark-purple; /* Assurez-vous d'avoir une valeur couleur valide */
+  border-radius: 25px;
 }
+
+.alert .btn-close {
+  color: $dark-purple !important; /* Assurez-vous d'utiliser une couleur valide */
+}
+
+.alert .btn-close svg {
+  fill: $dark-purple !important;
+}
+
+.alert .btn-close:hover svg {
+  fill: lighten($dark-purple, 15%) !important;
+}
+
