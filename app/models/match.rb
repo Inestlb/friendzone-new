@@ -10,4 +10,8 @@ class Match < ApplicationRecord
   def last_message
     messages.last
   end
+
+  def other_user(current_user)
+    first_user == current_user ? second_user : first_user
+  end
 end

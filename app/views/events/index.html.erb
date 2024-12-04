@@ -1,6 +1,6 @@
 <div class="all-events-cards">
   <% @events.each do |event| %>
-    <div class="card-event inter-regular">
+    <div class="card-event">
       <img src="<%= event.image_url %>" alt="<%= event.title %>" />
 
       <div class="card-event-infos">
@@ -15,42 +15,49 @@
       </div>
 
       <div class="buttons">
-        <p class="btn-join" data-controller="join" data-action="click->join#click" data-events-target="JoinButton">
+        <p class="btn-join button bebas-neue-regular" data-controller="join" data-action="click->join#click" data-events-target="JoinButton">
           <i class="fa-solid fa-user" style="color: #ffffff;"></i> Join the event
         </p>
 
-        <button type="button" class="btn-share" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn-share button bebas-neue-regular" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <i class="fa-solid fa-paper-plane" style="color: #ffffff;"></i> Share
         </button>
       </div>
 
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
+          <%= simple_form_for :send_event, url: send_event_event_path(event), method: :patch do |f| %>
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title bebas-neue-regular" id="exampleModalLabel">Who would you like to share this event with?</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-              <% current_user.all_matches.each do |match| %>
-                <% first_user = match.first_user %>
-                <% second_user = match.second_user %>
-                <% if first_user == current_user %>
-                  <%= second_user.name %>
-                  <input type="checkbox" value=<%= second_user.id %>><br>
-                <% else %>
-                  <%= first_user.name %>
-                  <input type="checkbox" value=<%= first_user.id %>><br>
-                <% end %>
-              <% end %>
+            <div class="modal-body inter-regular">
+            <%= f.input :match_ids,
+                title: false,
+                input_html: { class:"ma-classe" },
+
+                collection: current_user.all_matches,
+                as: :check_boxes,
+                value_method: ->(match) { match.id },
+                label_method: ->(match) {
+                  content_tag(:div) do
+                    content_tag(:p, match.other_user(current_user).name, style: "margin-bottom: 0")
+                  end
+
+                },
+                wrapper: false,
+                label: "Select one or more matches:",
+                required: false
+        %>
             </div>
             <div class="modal-footer">
             <div class="button-event-container">
-              <button type="button" class="button-event bebas-neue-regular" style="padding: 8px 16px; font-size: 16px; flex: 1;">Close</button>
-              <button type="button" class="button-event bebas-neue-regular" style="padding: 8px 16px; font-size: 16px; flex: 1;">Share events</button>
+      <%= button_tag type: "submit", class: "button-event bebas-neue-regular", style: "padding: 8px 16px; font-size: 16px; flex: 1;" do %> <i class="fa-solid fa-user" style="color: #ffffff; margin-right: 8px;"></i> Share events <% end %>
             </div>
             </div>
           </div>
+          <% end %>
         </div>
       </div>
     </div>
