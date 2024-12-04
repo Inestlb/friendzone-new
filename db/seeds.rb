@@ -283,7 +283,7 @@ users = [
     password: "letmein",
     age: 25,
     avatar_url: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1733134726/IMG_6195_ekteow.png",
-    language: ["Portoguese", "Spanish"].join(' '),
+    language: ["Portuguese", "Spanish"].join(' '),
     mood: "party_night",
     vacation: "city",
     life_choice: "travail",
