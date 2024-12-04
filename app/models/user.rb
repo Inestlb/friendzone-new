@@ -9,6 +9,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_one_attached :avatar
+  has_one_attached :mood_image
+  has_one_attached :vacation_image
+  has_one_attached :life_image
   has_many_attached :photos
 
   has_many :messages, dependent: :destroy

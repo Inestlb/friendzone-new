@@ -318,6 +318,28 @@ users = [
   # }
 ]
 
+
+flashcards = {
+  mood: {
+    cosy: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg",
+    drink: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg",
+    party_night: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg",
+    museum: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
+  },
+  vacation: {
+    montagne: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg",
+    plage: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg",
+    city: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg",
+    forêt: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
+  },
+  life_choice: {
+    famille: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg",
+    amour: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg",
+    argent: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg",
+    travail: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg"
+  }
+}
+
 begin
   users.each do |user|
     new_user = User.new(user)
