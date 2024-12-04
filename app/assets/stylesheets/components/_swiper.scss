@@ -11,7 +11,7 @@ $green: #B1DA96;
   padding-top: 1.5rem;
   bottom: 5.875rem;
   overflow-x: hidden;
-  background-color: $dark-purple;
+  background-color: #090510;
 
   &__content {
     user-select: none;
@@ -33,9 +33,10 @@ $green: #B1DA96;
     top: 0;
     width: 100%;
     transform-origin: 50% 100%;
-    background-color: white;
+    background-color: #090510;
     border-radius: 1.5rem;
-    padding: 1.4rem;
+    padding-top: 1.4rem;
+    padding-bottom: 3.5rem;
 
     &.reset {
       transition: transform 0.3s;
@@ -67,6 +68,7 @@ $green: #B1DA96;
       height: 100%;
       border-radius: 0.8rem;
       position: relative;
+      padding-bottom: 6rem;
       &_top {
         position: absolute;
         top: 0;
@@ -161,5 +163,3 @@ $green: #B1DA96;
     }
   }
 }
-
-

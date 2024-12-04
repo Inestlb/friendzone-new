@@ -1,8 +1,37 @@
+ <%
+  mood_url = case current_user.mood
+  when "cosy" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg"
+  when "drink" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
+  when "party_night" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg"
+  when "museum" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
+  end
+%>
+
+<%
+  vacation_url = case current_user.vacation
+  when "montagne" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg"
+  when "plage" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg"
+  when "city" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg"
+  when "forêt" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
+  end
+%>
+
+<%
+life_choice_url = case current_user.life_choice
+  when "famille" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg"
+  when "amour" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg"
+  when "argent" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg"
+  when "travail" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg"
+  end
+%>
+
+
+
  <div class="profile-container">
   <!-- Profil Header -->
   <div class="profile-header">
-    <div class="avatar">
-      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100", alt: "Avatar de #{@user.name}" %>
+    <div class="avatar-profil">
+      <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
     </div>
     <div class="name">
       <strong><%= @user.name %></strong>
@@ -10,33 +39,36 @@
   </div>
 
   <!-- Stats Section -->
-  <div class="stats-container">
+  <div class="stats-container-profil">
     <div class="stats-item">
-      <p>Paris</p>
-      <small>City</small>
+      <p><%= @user.age  %></p>
+      <%# <small>Âge</small> %>
     </div>
     <div class="stats-item">
-      <p><%= @user.age %></p>
-      <small>Âge</small>
+      <p>Paris</p>
+      <%# <small>City</small> %>
     </div>
     <div class="stats-item">
       <p><%= @user.language || "Anglais" %></p>
-      <small>Langues</small>
+      <%# <small>Langues</small> %>
     </div>
   </div>
 
   <!-- Réponses Section -->
-  <h5 class="section-title">Réponses</h5>
+  <%# <h5 class="section-title mt-0">Réponses</h5> %>
   <div class="answers">
-    <%= image_tag 'https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg', alt: 'cosy' %>
-    <%= image_tag 'https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg', alt: 'foret' %>
-    <%= image_tag 'https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg', alt: 'Cocktail' %>
-    <%= image_tag 'https://images.unsplash.com/photo-1450644995374-1721affb8ecd?q=80&w=2940&auto=format&fit=crop', alt: 'Voyage' %>
+
+    <%= image_tag mood_url, alt: current_user.mood %>
+    <%= image_tag life_choice_url, alt: current_user.mood %>
+    <%= image_tag vacation_url, alt: current_user.mood %>
+
   </div>
 
   <!-- Events Section -->
+    <div class= "events-title">
+      <h5>Évènements</h5>
+    </div>
   <div class="events-container">
-    <h5>Évènements</h5>
     <div class="event-item">
       <div class="event-icon event1"></div>
       <p class="event-text">Beach-Volley à Pantin</p>
