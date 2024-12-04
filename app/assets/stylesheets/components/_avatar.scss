@@ -45,4 +45,22 @@
   margin: auto;
   font-size: 50px;
   color: #6af6a2;
+  border: solid;
+  border-color: #8576FF;
+}
+
+.avatar-profil-green {
+  width: 220px;
+  height: 220px;
+  background-color: #161032;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  justify-content: right;
+  align-items: right;
+  margin: auto;
+  font-size: 50px;
+  color: #6af6a2;
+  border: solid;
+  border-color: #6af6a2;
 }

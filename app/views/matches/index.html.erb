@@ -7,7 +7,7 @@
     <% @matches.each do |match| %>
       <!-- Détermine l'utilisateur associé au match -->
       <% matched_user = (match.first_user_id == current_user.id ? User.find(match.second_user_id) : User.find(match.first_user_id)) %>
-      <%= link_to match_path(match) do %>
+      <%= link_to match_path(match)  do %>
       <div class="conversation-card">
         <!-- Avatar de l'utilisateur matché -->
         <div class="conversation-avatar">
@@ -34,7 +34,7 @@
         <!-- Date du dernier message -->
         <% if match.last_message %>
           <div class="conversation-date">
-            <p><%= match.last_message.created_at.strftime("%d %b %Y, %H:%M") %></p>
+          
           </div>
         <% end %>
       </div>

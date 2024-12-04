@@ -37,6 +37,21 @@
   color: #6c757d;
 }
 
+.stats-item {
+  text-align: center;
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  background-color: #8576FF;
+  border-radius: 25px;
+  margin: 10px;
+  // padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2px 20px;
+  display: flex;
+  align-items: center;
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 .section-title {
   font-weight: bold;
   margin-top: 20px;
@@ -60,24 +75,36 @@
 }
 
 .events-container {
-  background-color: #f8f9fa;
   padding: 15px;
   border-radius: 15px;
   text-align: left;
   color:#333;
 }
 
+.events-title h5 {
+  color: #8576FF;
+  font-family: "Impact", sans-serif;
+  font-weight: bold;
+
+}
 .events-container h5 {
   font-weight: bold;
   margin-bottom: 10px;
-  text-align: center;
   color: white;
 }
 
 .event-item {
+  text-align: center;
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  border: solid;
+  border-color: #8576FF;
+  border-radius: 25px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2px 20px;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .event-item:last-child {
