@@ -22,16 +22,17 @@
             </div>
             <!--info Section -->
             <div class="stats-container">
-              <div class="stats-item">
-                <p><%= user.age %></p>
-                <%# <small>Âge</small> %>
+              <div class="grid-symp">
+                <div class="stats-item">
+                  <i class="fa-solid fa-cake-candles"></i><p><%= user.age %> yrs</p>
+
+                </div>
+                <div class="stats-item">
+                  <i class="fa-solid fa-location-dot"></i><p>5 km</p>
+                </div>
               </div>
               <div class="stats-item">
-                <p>5 km</p>
-                <%# <small>Distance</small> %>
-              </div>
-              <div class="stats-item">
-                <p><%= user.language %></p>
+                <i class="fa-solid fa-comment"></i><p><%= user.language %></p>
                 <%# <small>Langues</small> %>
               </div>
             </div>
@@ -69,7 +70,7 @@
 
             <!-- Events -->
             <div class="events-title">
-              <h5>Événements</h5>
+              <h5>Events</h5>
             </div>
             <div class="events-container mt-2">
               <div class="event-item">
@@ -82,7 +83,7 @@
               </div>
               <div class="event-item">
                 <div class="event-icon event3"></div>
-                <p class="event-text">Soirée Bachata au Cabaret Sauvage</p>
+                <p class="event-text">Soirée au Cabaret Sauvage</p>
               </div>
             </div>
 

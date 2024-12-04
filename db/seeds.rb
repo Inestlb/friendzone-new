@@ -13,83 +13,84 @@ events_data = [
     date: DateTime.now + rand(1..15).days,
     price: 69.0,
     location: "Stade de France, 93200 Saint-Denis",
-    title: "Concert The Beatles",
-    description: "Un concert légendaire des Beatles au Stade de France, réunissant des milliers de fans.",
+    title: "The Beatles Concert",
+    description: "A legendary Beatles concert at the Stade de France, bringing together thousands of fans.",
     image_url: "https://www.radiofrance.fr/s3/cruiser-production-eu3/2017/09/aba5ee37-f87f-469b-b8a7-8135934fa366/640x340_beatles_gettyimages-89724270.jpg"
   },
   {
     date: DateTime.now + rand(1..15).days,
     price: 26.90,
     location: "Athena Art Café, 3 rue Claude Chahu Paris 75016",
-    title: "Café peinture",
-    description: "Un café peinture chaleureux où créativité et convivialité se rencontrent.",
+    title: "Painting Café",
+    description: "A cozy painting café where creativity and friendliness come together.",
     image_url: "https://cdn.sortiraparis.com/images/80/62403/736808-drink-paint-un-afterwork-peinture-et-degustation-de-vin-en-compagnie-d-un-e-artiste-a-paris.jpg"
   },
   {
     date: DateTime.now + rand(1..15).days,
     price: 9.90,
-    location: "59 rue des horizons, 75012 Paris",
-    title: "Cinéma sur les toits",
-    description: "Au programme : des classiques intemporels et des pépites du cinéma indépendant.",
+    location: "59 rue des Horizons, 75012 Paris",
+    title: "Cinema on the Rooftops",
+    description: "On the agenda: timeless classics and gems of independent cinema.",
     image_url: "https://offloadmedia.feverup.com/parissecret.com/wp-content/uploads/2020/07/19141426/rooftop-cinema-edit-xlarge-1024x577.jpg"
   },
   {
     date: DateTime.now + rand(1..15).days,
     price: 89.00,
-    location: "Boulevard du parc, 77700 Coupvray",
+    location: "Boulevard du Parc, 77700 Coupvray",
     title: "Disneyland",
-    description: "Une journée magique à Disneyland Paris, où attractions et parades féeriques deviennent réalité.",
+    description: "A magical day at Disneyland Paris, where attractions and fairy-tale parades come to life.",
     image_url: "https://res.cloudinary.com/du5jifpgg/image/upload/t_opengraph_image/Parcours/itin%C3%A9raires/Disneyland-et-alentours/Fetes-de-fin-d-annee-2021-a-disneyland-paris-header.jpg"
   },
   {
     date: DateTime.now + rand(1..15).days,
     price: 23.50,
     location: "5 Quai Marcel Dassault - 92150 Suresnes",
-    title: "Brunch sur une péniche",
-    description: "Un brunch sur une péniche, mêlant délices gourmands et vue imprenable.",
+    title: "Brunch on a Boat",
+    description: "A brunch on a boat, blending gourmet delights and breathtaking views.",
     image_url: "https://uploads.lebonbon.fr/source/2022/november/16172/img-3969-1-_1_2000.jpg"
   },
   {
-      date: DateTime.now + rand(1..15).days,
-      price: 11.50,
-      location: "Grand Palais Immersif, 110, rue de Lyon, 75012 Paris",
-      title: "Exposition PIXELS de Miguel Chevalier",
-      description: "La première grande exposition parisienne dédiée à l’art numérique.",
-      image_url: "https://grandpalais-immersif.fr/sites/immersif/files/styles/w1920_extra_wide/public/2024-10/GPI_miguelchevalier_affiche_231024.jpg?itok=k7OqlfQc"
+    date: DateTime.now + rand(1..15).days,
+    price: 11.50,
+    location: "Grand Palais Immersif, 110, rue de Lyon, 75012 Paris",
+    title: "PIXELS Exhibition by Miguel Chevalier",
+    description: "The first major Parisian exhibition dedicated to digital art.",
+    image_url: "https://grandpalais-immersif.fr/sites/immersif/files/styles/w1920_extra_wide/public/2024-10/GPI_miguelchevalier_affiche_231024.jpg?itok=k7OqlfQc"
   },
   {
-      date: DateTime.now + rand(1..15).days,
-      price: 5.0,
-      location: "Paris",
-      title: "Run dans Paris avec RunNation",
-      description: "Un footing dynamique avec l’appli de jeux de running Run Nation.",
-      image_url: "https://www2.u-trail.com/wp-content/uploads/2022/01/footig.jpg"
+    date: DateTime.now + rand(1..15).days,
+    price: 5.0,
+    location: "Paris",
+    title: "Run in Paris with RunNation",
+    description: "A dynamic jogging session with the Run Nation running game app.",
+    image_url: "https://www2.u-trail.com/wp-content/uploads/2022/01/footig.jpg"
   },
   {
     date: DateTime.now + rand(1..15).days,
     price: 6.50,
-    location: "14 rue Crespin du gast, 75011 Paris",
-    title: "Concours de fléchettes",
-    description: "Un concours de fléchettes convivial à l’école Le Wagon.",
+    location: "14 rue Crespin du Gast, 75011 Paris",
+    title: "Darts Tournament",
+    description: "A friendly darts tournament at Le Wagon School.",
     image_url: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Darts_in_a_dartboard.jpg"
   },
   {
-      date: DateTime.now + rand(1..15).days,
-      price: 19.90,
-      location: "Pl. de l'Opéra, 75009 Paris",
-      title: "Escape Game à l'Opéra garnier",
-      description: "Un escape game palpitant où les participants explorent les mystérieuses coulisses de ce monument emblématique.",
-      image_url: "https://www.dansesaveclaplume.com/wordpress/wp-content/uploads/inside-opera_home-ok.jpg"
+    date: DateTime.now + rand(1..15).days,
+    price: 19.90,
+    location: "Pl. de l'Opéra, 75009 Paris",
+    title: "Escape Game at the Opera Garnier",
+    description: "An exciting escape game where participants explore the mysterious backstage of this iconic monument.",
+    image_url: "https://www.dansesaveclaplume.com/wordpress/wp-content/uploads/inside-opera_home-ok.jpg"
   },
   {
-      date: DateTime.now + rand(1..15).days,
-      price: 5.0,
-      location: "Paris",
-      title: "Regarder un film avec RealMates",
-      description: "Une soirée cinéma inoubliable grâce à l’appli Reelmates.",
-      image_url: "https://resize.programme-television.org/original/var/premiere/storage/images/news/streaming/prime-video/comment-regarder-des-films-et-des-series-en-streaming-gratuitement-4717889/101960816-1-fre-FR/Comment-regarder-des-films-et-des-series-en-streaming-gratuitement.jpg"   # event.photo.attach(io: file, filename: "event_#{event.id}.png", content_type: "image/png"  # event.save!
+    date: DateTime.now + rand(1..15).days,
+    price: 5.0,
+    location: "Paris",
+    title: "Watch a Movie with RealMates",
+    description: "An unforgettable movie night thanks to the ReelMates app.",
+    image_url: "https://resize.programme-television.org/original/var/premiere/storage/images/news/streaming/prime-video/comment-regarder-des-films-et-des-series-en-streaming-gratuitement-4717889/101960816-1-fre-FR/Comment-regarder-des-films-et-des-series-en-streaming-gratuitement.jpg"
   },
 ]
+
 events_data.each do |event_data|
     # Crée l’événement
     event = Event.create!(
@@ -114,7 +115,7 @@ puts "Creating users..."
 
 users = [
   {
-    name: "Rousselot 🇺🇸",
+    name: "Rousselot",
     email: 'test1@test.test',
     password: '123456',
     age: 23,
@@ -140,7 +141,7 @@ users = [
   #   friends_distance: 50
   # },
   {
-    name: "Ilan 🇫🇷",
+    name: "Ilan",
     email: 'test3@test.test',
     password: '123456',
     age: 33,
@@ -210,7 +211,7 @@ users = [
     password: '123456',
     age: 31,
     avatar_url: "baudouin.jpg",
-    language: ["Japonais", "Anglais"].join(' '),
+    language: ["Japanese", "English"].join(' '),
     mood: "museum",
     vacation: "city",
     life_choice: "travail",
@@ -223,7 +224,7 @@ users = [
     password: '123456',
     age: 25,
     avatar_url: "milena.jpg",
-    language: ["Français", "Allemand", "Anglais"].join(' '),
+    language: ["French", "German", "English"].join(' '),
     mood: "party_night",
     vacation: "plage",
     life_choice: "argent",
@@ -231,12 +232,12 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Antoine 🇪🇸",
+    name: "Antoine",
     email: "sofia@test.test",
     password: "123abc",
     age: 24,
     avatar_url: "antoine.jpg",
-    language: ["Espagnol", "Anglais"].join(' '),
+    language: ["Spanish", "English"].join(' '),
     mood: "cosy",
     vacation: "plage",
     life_choice: "famille",
@@ -244,12 +245,12 @@ users = [
     friends_distance: 20
   },
   {
-    name: "Paul 🇩🇪",
+    name: "Paul",
     email: "noah@test.test",
     password: "securepass",
     age: 27,
     avatar_url: "pauul.jpg",
-    language: ["Allemand", "Anglais"].join(' '),
+    language: ["German", "English"].join(' '),
     mood: "party_night",
     vacation: "foret",
     life_choice: "argent",
@@ -270,12 +271,12 @@ users = [
   #   friends_distance: 50
   # },
   {
-    name: "Santiana 🇮🇹",
+    name: "Santiana",
     email: "mia@test.test",
     password: "pass123",
     age: 29,
     avatar_url: "santiana.jpg",
-    language: ["Italien", "Français"].join(' '),
+    language: ["Italian", "French"].join(' '),
     mood: "drink",
     vacation: "plage",
     life_choice: "amour",
@@ -283,12 +284,12 @@ users = [
     friends_distance: 45
   },
   {
-    name: "Micka 🇧🇷",
+    name: "Micka",
     email: "benjamin@test.test",
     password: "letmein",
     age: 25,
     avatar_url: "micka.jpg",
-    language: ["Portugais", "Espagnol"].join(' '),
+    language: ["Portuguese", "Spanish"].join(' '),
     mood: "party_night",
     vacation: "city",
     life_choice: "travail",
@@ -296,12 +297,12 @@ users = [
     friends_distance: 50
   },
   {
-    name: "Emilie 🇲🇦",
+    name: "Emilie",
     email: "ali@test.test",
     password: "desert2024",
     age: 31,
     avatar_url: "emilie.jpg",
-    language: ["Arabe", "Français"].join(' '),
+    language: ["Arab", "French"].join(' '),
     mood: "cosy",
     vacation: "montagne",
     life_choice: "famille",

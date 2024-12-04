@@ -12,7 +12,7 @@
   padding-bottom: 8.5rem;
 }
 
-.avatar {
+.avatar{
   width: 110px;
   height: 110px;
   background-color: #e0e0e0;
@@ -23,6 +23,8 @@
   margin: 0;
   font-size: 50px;
   color: #6af6a2;
+  border: solid;
+  border-color: #6af6a2;
 }
 
 .user-details {
@@ -55,45 +57,43 @@
   padding: 0px;
   border-radius: 15px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   flex-direction: column;
   background-color: #090510;
   padding: 15px;
   border-radius: 15px;
-  margin: 20px 0;
+  margin: 2px 0;
   color:#333;
   //margin-bottom: 3;
 }
 
 //
-.stats-item {
+.stats-item-profil{
   text-align: center;
   flex: 1;
   font-family: "Inter", sans-serif;
-  background-color: #8576FF;
+  background-color: #6af6a2;
   border-radius: 25px;
   margin: 10px;
-  // padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   padding: 2px 20px;
   display: flex;
-  // box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  gap: 5px; /* Espace entre l'icône et le texte */
+  white-space: nowrap;
+
 }
 
-.stats-item p {
-  font-size: 18px;
+.stats-item-profil p {
+  font-size: 16px;
   font-weight: bold;
   padding: 2px;
   margin-bottom: 0px !important;
   font-family: "Inter", sans-serif;
 }
 
-// .stats-item small {
-//   font-size: 14px;
-//   color: #666;
-//   font-family: "Inter", sans-serif;
-// }
+
 .stats-item p {
   font-size: 16px;
   font-weight: bold;
@@ -131,23 +131,30 @@
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
-  height: 180px; /* Fixe la hauteur pour des proportions uniformes */
+  height: 120px; /* Fixe la hauteur pour des proportions uniformes */
 }
 
-.events-container {
-  margin-top: 0px;
-  font-family: "Inter", sans-serif;
+.events-container-profil {
+  padding: 15px;
+  border-radius: 15px;
   text-align: left;
-  border: #6af6a2 1px solid;
-  background-color: #090510;
+  color: #333;
 }
 
-.event-item {
+.event-item-profil {
+  text-align: center;
+  flex: 1;
+  font-family: "Inter", sans-serif;
+  border: solid;
+  border-color: #6af6a2;
+  border-radius: 25px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2px 20px;
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
-  font-family: "Inter", sans-serif;
 }
+
 
 // .event-icon {
 //   width: 40px;
@@ -165,7 +172,7 @@
   text-align: center;
 }
 
-.events-title {
+.events-title-profile {
   color: #6af6a2;
   // background-color: #8576FF;
   margin: auto;
@@ -186,4 +193,17 @@
   border-radius: 20px;
   // padding: 10px;
   gap: 0.5rem; /* Espace entre l'icône et le texte */
+}
+
+.icone-profil {
+  font-size: larger;
+  margin-right: 12px;
+  color: #161032;
+}
+
+.grid-symp {
+  display: flex; /* Utilise le flexbox pour aligner les éléments */
+  gap: 10px; /* Ajoute un espace entre les éléments */
+  align-items: center; /* Centre verticalement les éléments */
+  flex-wrap: nowrap;
 }

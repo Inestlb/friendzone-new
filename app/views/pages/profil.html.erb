@@ -11,16 +11,16 @@
 
   <!-- Stats Section -->
   <div class="stats-container-profil">
-    <div class="stats-item">
-      <p><%= @user.age  %></p>
-      <%# <small>Âge</small> %>
-    </div>
-    <div class="stats-item">
-      <p>Paris</p>
-      <%# <small>City</small> %>
-    </div>
-    <div class="stats-item">
-      <p><%= @user.language || "Anglais" %></p>
+    <div class="grid-symp">
+      <div class="stats-item-profil">
+        <i class="fa-solid fa-cake-candles icone-profil"></i> <p> <%= @user.age%> yrs</p>
+      </div>
+      <div class="stats-item-profil">
+        <i class="fa-solid fa-location-dot icone-profil"></i> <p> Paris</p>
+      </div>
+  </div>
+    <div class="stats-item-profil">
+      <i class="fa-solid fa-comment icone-profil"></i><p> <%= @user.language || "Anglais" %></p>
       <%# <small>Langues</small> %>
     </div>
   </div>
@@ -34,21 +34,21 @@
   </div>
 
   <!-- Events Section -->
-    <div class= "events-title">
-      <h5>Évènements</h5>
+    <div class= "events-title-profile">
+      <h5>Events</h5>
     </div>
-  <div class="events-container">
-    <div class="event-item">
+  <div class="events-container-profil">
+    <div class="event-item-profil">
       <div class="event-icon event1"></div>
       <p class="event-text">Beach-Volley à Pantin</p>
     </div>
-    <div class="event-item">
+    <div class="event-item-profil">
       <div class="event-icon event2"></div>
       <p class="event-text">Soirée Latino au Salsero</p>
     </div>
-    <div class="event-item">
+    <div class="event-item-profil">
       <div class="event-icon event3"></div>
-      <p class="event-text">Soirée Bachata au Cabaret Sauvage</p>
+      <p class="event-text">Soirée au Cabaret Sauvage</p>
     </div>
   </div>
 </div>
