@@ -22,7 +22,7 @@
           <!-- Aperçu du dernier message (ajuste selon ton modèle de messages) -->
           <% if match.last_message %>
             <p class="conversation-last-message">
-              <%= match.last_message.body.truncate(30) %>
+              <%= match.last_message.content.truncate(30) %>
             </p>
           <% else %>
             <p class="conversation-last-message">
