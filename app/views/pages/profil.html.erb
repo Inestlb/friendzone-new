@@ -33,7 +33,7 @@ life_choice_url = case current_user.life_choice
  <div class="profile-container">
   <!-- Profil Header -->
   <div class="profile-header">
-    <div class="avatar-profil">
+    <div class="avatar-profil-green">
       <%= cl_image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
     </div>
     <div class="name">
@@ -43,16 +43,16 @@ life_choice_url = case current_user.life_choice
 
   <!-- Stats Section -->
   <div class="stats-container-profil">
-    <div class="stats-item">
-      <p><%= @user.age  %></p>
+    <div class="stats-item-profil">
+      <i class="fa-solid fa-cake-candles icone-profil"></i> <p> <%= @user.age%> yrs</p>
       <%# <small>Âge</small> %>
     </div>
-    <div class="stats-item">
-      <p>Paris</p>
+    <div class="stats-item-profil">
+      <i class="fa-solid fa-location-dot icone-profil"></i> <p> Paris</p>
       <%# <small>City</small> %>
     </div>
-    <div class="stats-item">
-      <p><%= @user.language || "Anglais" %></p>
+    <div class="stats-item-profil">
+      <i class="fa-solid fa-comment icone-profil"></i><p> <%= @user.language || "Anglais" %></p>
       <%# <small>Langues</small> %>
     </div>
   </div>
@@ -67,21 +67,21 @@ life_choice_url = case current_user.life_choice
   </div>
 
   <!-- Events Section -->
-    <div class= "events-title">
+    <div class= "events-title-profile">
       <h5>Évènements</h5>
     </div>
-  <div class="events-container">
-    <div class="event-item">
+  <div class="events-container-profil">
+    <div class="event-item-profil">
       <div class="event-icon event1"></div>
       <p class="event-text">Beach-Volley à Pantin</p>
     </div>
-    <div class="event-item">
+    <div class="event-item-profil">
       <div class="event-icon event2"></div>
       <p class="event-text">Soirée Latino au Salsero</p>
     </div>
-    <div class="event-item">
+    <div class="event-item-profil">
       <div class="event-icon event3"></div>
-      <p class="event-text">Soirée Bachata au Cabaret Sauvage</p>
+      <p class="event-text">Soirée au Cabaret Sauvage</p>
     </div>
   </div>
 </div>
