@@ -30,7 +30,7 @@
               end
           %>
 
-        <div class="swiper__card "
+        <div class="swiper__card"
               data-swipe-target="card"
               data-id="<%= user.id %>"
               data-current="<%= current_user.id %>"
@@ -52,15 +52,15 @@
             <div class="stats-container">
               <div class="grid-symp">
                 <div class="stats-item">
-                  <p><%= user.age %> yrs</p>
+                  <i class="fa-solid fa-cake-candles"></i><p><%= user.age %> yrs</p>
 
                 </div>
                 <div class="stats-item">
-                  <p>5 km</p>
+                  <i class="fa-solid fa-location-dot"></i><p>5 km</p>
                 </div>
               </div>
               <div class="stats-item">
-                <p><%= user.language %></p>
+                <i class="fa-solid fa-comment"></i><p><%= user.language %></p>
                 <%# <small>Langues</small> %>
               </div>
             </div>
