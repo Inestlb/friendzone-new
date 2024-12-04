@@ -2,8 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: 40px;
+  padding-bottom: 58px;
+  padding-top: 158px;
 }
 
 .card-event {
@@ -31,25 +33,27 @@
   width: 100%;
   object-fit: cover;
   border-radius: 8px;
-  margin-bottom: 12px
+  margin-bottom: 12px;
 }
 
 .card-event-infos {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-between; /* Sépare les blocs en deux côtés */
+  align-items: center; /* Centre verticalement */
+  gap: 16px;
   width: 100%;
 }
 
 .card-event-details {
   display: flex;
   flex-direction: column;
+  text-align: left; /* Aligne à gauche pour une lisibilité optimale */
   gap: 8px;
   flex: 1;
 }
 
 .card-event-details h2 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
   margin: 0;
   color: white;
@@ -77,26 +81,22 @@
   font-weight: bold;
   color: white;
   text-align: right;
-  align-self: flex-end;
   white-space: nowrap;
   min-width: 60px;
-  padding-left: 10px;
-  margin-top: 8px;
+  margin: 0; /* Supprime les marges pour un meilleur alignement */
 }
 .buttons {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
 }
-
 
 .buttons .btn-join,
 .buttons .btn-share {
   display: inline-flex;
   align-items: center;
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: 50px;
   background-color: #8576FF;
   color: #ffffff;
   text-decoration: none;
@@ -113,4 +113,22 @@
 .buttons .btn-share:hover {
   background-color: #6a5acd;
   transform: translateY(-2px);
+}
+
+.buttons .btn-join.green {
+  background-color: #6af6a2;
+  color: $dark-purple;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 50px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 120px;
+  height: 40px;
+  padding: 8px 16px;
+  flex: 1;
 }

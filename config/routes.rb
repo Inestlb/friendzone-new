@@ -20,7 +20,11 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
 
-  resources :events, only: [:index, :show]
+  resources :events, only: [:index, :show] do
+    member do
+      patch :send_event
+    end
+  end
   get "profil", to: "pages#profil", as: :profil
 
     # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

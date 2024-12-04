@@ -1,8 +1,3 @@
-.buttons .btn-join.green {
-  background-color: #6af6a2;
-  color: $dark-purple;
-}
-
 .button-event-container {
   display: flex; /* Utilise Flexbox pour aligner les boutons côte à côte */
   gap: 20px; /* Espacement entre les boutons */
@@ -12,16 +7,48 @@
   background-color: #8576FF;
   border: none;
   border-radius: 50px;
-  color: white;
+  color: $white;
   text-align: center;
   text-decoration: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  width: 120px;
-  height: 40px;
   padding: 8px 16px;
-  font-size: 16px;
-  flex: 1; /* Les boutons prennent chacun une largeur égale */
+  white-space: nowrap;
+  letter-spacing: 1px;
+  height: auto;
+  width: auto;
+  min-height: 40px;
+  min-width: 120px;
 }
+
+.btn-close {
+  filter: invert(1);
+}
+// .card-share-event {
+//   background: #1d1544;
+//   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+//   border-radius: 12px;
+//   padding: 12px;
+//   color: white;
+//   display: flex; /* Aligne le contenu horizontalement */
+//   align-items: center; /* Centrage vertical */
+//   gap: 12px; /* Espace entre la case à cocher et le texte */
+//   font-size: 14px; /* Taille du texte */
+// }
+
+// .card-share-event input[type="checkbox"] {
+//   margin: 0;
+//   width: 20px;
+//   height: 20px;
+//   accent-color: #8576FF; /* Couleur personnalisée pour la case */
+//   flex-shrink: 0; /* Empêche la case de rétrécir */
+// }
+
+// .card-share-event p {
+//   margin: 0; /* Supprime les marges par défaut du texte */
+//   color: white;
+//   font-size: 14px;
+//   font-weight: normal;
+// }
