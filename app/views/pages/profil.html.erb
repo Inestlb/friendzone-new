@@ -2,7 +2,7 @@
   <!-- Profil Header -->
   <div class="profile-header">
     <div class="avatar-profil">
-      <%= cl_image_tag @user.avatar.key, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
+      <%= image_tag @user.avatar_url, class: "rounded-circle w-100 h-100 object-fit-cover", alt: "Avatar de #{@user.name}" %>
     </div>
     <div class="name">
       <strong><%= @user.name %></strong>
@@ -28,10 +28,9 @@
   <!-- Réponses Section -->
   <%# <h5 class="section-title mt-0">Réponses</h5> %>
   <div class="answers">
-    <%= cl_image_tag current_user.mood_image.key, alt: current_user.mood if current_user.mood_image.attached? %>
-    <%= cl_image_tag current_user.life_image.key, alt: current_user.mood if current_user.life_image.attached? %>
-    <%= cl_image_tag current_user.vacation_image.key, alt: current_user.mood if current_user.vacation_image.attached? %>
-
+    <%= image_tag "flashcard_mood_#{current_user.mood}", alt: current_user.mood unless current_user.mood.nil? %>
+    <%= image_tag "flashcard_interest_#{current_user.life_choice}", alt: current_user.life_choice unless current_user.life_choice.nil? %>
+    <%= image_tag "flashcard_vacances_#{current_user.vacation}", alt: current_user.vacation %>
   </div>
 
   <!-- Events Section -->

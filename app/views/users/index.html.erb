@@ -2,8 +2,6 @@
   <div class="swiper__content">
     <div class="swiper__card-cont">
       <% @users.each do |user| %>
-
-
         <div class="swiper__card "
               data-swipe-target="card"
               data-id="<%= user.id %>"
@@ -15,7 +13,7 @@
               <%# La partie du haut de la carte %>
             </div>
             <div class="avatar-profil mb-2">
-              <%= cl_image_tag user.avatar.key, class: 'swiper__card__img rounded-circle w-100 h-100 object-fit-cover' %>
+              <%= image_tag user.avatar_url, class: 'swiper__card__img rounded-circle w-100 h-100 object-fit-cover' %>
             </div>
 
             <!-- Name -->
@@ -45,19 +43,22 @@
                   <!-- Image 1 -->
                   <div class="col-12 col-md-3">
                     <div class="">
-                      <%= cl_image_tag user.mood_image.key, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
+                      <%= image_tag "flashcard_mood_#{user.mood}", class: "img-fluid", style: "border-radius: 10px; height: 180px; width: 108px", alt: user.mood unless user.mood.nil? %>
+                      <%#= cl_image_tag user.mood_image.key, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
                   <!-- Image 2 -->
                   <div class="col-12 col-md-3">
                     <div class="">
-                      <%= cl_image_tag user.vacation_image.key, class: "img-fluid", alt: user.vacation, style: "border-radius: 10px; height: 180px; width: 108px" %>
+                      <%= image_tag "flashcard_interest_#{user.life_choice}", class: "img-fluid", style: "border-radius: 10px; height: 180px; width: 108px", alt: user.life_choice unless user.life_choice.nil? %>
+                      <%#= cl_image_tag user.vacation_image.key, class: "img-fluid", alt: user.vacation, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
                   <!-- Image 3 -->
                   <div class="col-12 col-md-3">
                     <div class="">
-                      <%= cl_image_tag user.life_image.key, class: "img-fluid", alt: user.life_choice, style: "border-radius: 10px; height: 180px; width: 108px" %>
+                      <%= image_tag "flashcard_vacances_#{user.vacation}", class: "img-fluid", style: "border-radius: 10px; height: 180px; width: 108px", alt: user.vacation unless user.vacation.nil? %>
+                      <%#= cl_image_tag user.life_image.key, class: "img-fluid", alt: user.life_choice, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
                   <!-- Image 4 -->

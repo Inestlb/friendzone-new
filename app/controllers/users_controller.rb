@@ -3,9 +3,9 @@ class UsersController < ApplicationController
 
   def index
     @users = User.where.not(id: current_user)
-    liked_users = User.joins(:likes_as_liked).where(likes_as_liked: { liker: current_user })
-    @users -= liked_users
-    @users = current_user.suggested_profiles
+    # liked_users = User.joins(:likes_as_liked).where(likes_as_liked: { liker: current_user })
+    # @users -= liked_users
+    # @users = current_user.suggested_profiles
   end
 
   def edit_mood
