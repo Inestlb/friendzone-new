@@ -318,7 +318,6 @@ users = [
   # }
 ]
 
-
 flashcards = {
   mood: {
     cosy: "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg",
@@ -342,7 +341,24 @@ flashcards = {
 
 begin
   users.each do |user|
-    new_user = User.new(user)
+    new_user = User.new(user.except(:avatar_url))
+    file = URI.parse(user[:avatar_url]).open
+    new_user.avatar.attach(io: file, filename: "#{new_user.name}.png", content_type: "image/png")
+
+    # gestion de mood, vacation, livechoice
+    # checker les keys correspondantes et attach la photo qui match avec
+    mood_image = flashcards[:mood][new_user.mood.to_sym]
+    file = URI.parse(mood_image).open
+    new_user.mood_image.attach(io: file, filename: "mood.png", content_type: "image/png")
+
+    vacation_image = flashcards[:vacation][new_user.vacation.to_sym]
+    file = URI.parse(vacation_image).open
+    new_user.vacation_image.attach(io: file, filename: "vacation.png", content_type: "image/png")
+
+    life_image = flashcards[:life_choice][new_user.life_choice.to_sym]
+    file = URI.parse(life_image).open
+    new_user.life_image.attach(io: file, filename: "life_choice.png", content_type: "image/png")
+
     if new_user.save
       puts "User #{new_user.name} created successfully!"
     else

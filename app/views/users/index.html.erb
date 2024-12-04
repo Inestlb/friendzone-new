@@ -3,32 +3,6 @@
     <div class="swiper__card-cont">
       <% @users.each do |user| %>
 
-          <%
-              mood_url = case user.mood
-              when "cosy" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723362/flashcard_mood_jrkyzo.jpg"
-              when "drink" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_bar_warrp5.jpg"
-              when "party_night" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_fete_lesxj8.jpg"
-              when "museum" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_mood_musee_fkcqae.jpg"
-              end
-            %>
-
-          <%
-              vacation_url = case user.vacation
-              when "montagne" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_montagne_hc31lz.jpg"
-              when "plage" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_mer_snd8ic.jpg"
-              when "city" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723116/flashcard_vacances_ville_hup7qb.jpg"
-              when "forêt" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723115/flashcard_vacances_foret_yff6lv.jpg"
-              end
-           %>
-
-          <%
-              life_choice_url = case user.life_choice
-              when "famille" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_famille_blhbzy.jpg"
-              when "amour" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723093/flashcard_interest_amour_fyguqm.jpg"
-              when "argent" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723113/flashcard_interest_money_optozh.jpg"
-              when "travail" then "https://res.cloudinary.com/dxhdcwxy0/image/upload/v1732723114/flashcard_interest_pro_2_afeocc.jpg"
-              end
-          %>
 
         <div class="swiper__card "
               data-swipe-target="card"
@@ -41,7 +15,7 @@
               <%# La partie du haut de la carte %>
             </div>
             <div class="avatar-profil mb-2">
-              <%= cl_image_tag user.avatar_url, class: 'swiper__card__img rounded-circle w-100 h-100 object-fit-cover' %>
+              <%= cl_image_tag user.avatar.key, class: 'swiper__card__img rounded-circle w-100 h-100 object-fit-cover' %>
             </div>
 
             <!-- Name -->
@@ -71,19 +45,19 @@
                   <!-- Image 1 -->
                   <div class="col-12 col-md-3">
                     <div class="">
-                      <%= image_tag mood_url, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
+                      <%= cl_image_tag user.mood_image.key, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
                   <!-- Image 2 -->
                   <div class="col-12 col-md-3">
                     <div class="">
-                      <%= image_tag vacation_url, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
+                      <%= cl_image_tag user.vacation_image.key, class: "img-fluid", alt: user.vacation, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
                   <!-- Image 3 -->
                   <div class="col-12 col-md-3">
                     <div class="">
-                      <%= image_tag life_choice_url, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
+                      <%= cl_image_tag user.life_image.key, class: "img-fluid", alt: user.life_choice, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
                   <!-- Image 4 -->
