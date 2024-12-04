@@ -76,25 +76,26 @@ body {
 
 /* Style pour les boutons */
 .button {
-background-color: #8576FF;
-border: none;
-border-radius: 50px;
-color: white; /* Texte blanc pour les boutons */
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-flex;
-justify-content: center;
-align-items: center;
-font-size: 16px;
-width: 120px;
-height: 40px;
-margin: 10px 0;  /* Espace entre les boutons */
+  background-color: #8576FF;
+  border: none;
+  border-radius: 50px;
+  color: white; /* Texte blanc pour les boutons */
+  padding: 10px 20px; /* Ajusté pour ne pas prendre trop de hauteur */
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  min-width: 140px; /* Largeur minimale augmentée */
+  height: 40px;
+  margin: 10px 0; /* Espace entre les boutons */
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 
 .button:hover {
-background-color: #6af6a2;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.12), 4px 8px 16px 0 rgba(0,0,0,0.18);
+  background-color: #6af6a2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 4px 8px 16px 0 rgba(0, 0, 0, 0.18);
 }
 
 /* Style pour le conteneur des boutons */

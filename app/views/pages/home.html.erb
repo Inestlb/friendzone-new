@@ -3,11 +3,11 @@
 </div>
 
 <div class="text">
-    <h1><%= image_tag 'logo_friendzone.png', alt: 'Friendzone Logo' %></h1>
-    <h2 class="bebas-neue-regular slogan">The only friendzone that doesn't hurt</h2>
+    <h1><%= image_tag 'friendzone_home.png', alt: 'Friendzone Logo' %></h1>
+    <%# <h2 class="impact-regular">that doesn't hurt</h2> %>
 </div>
 
-<div class="content button-container inter-regular">
+<div class="content button-container impact-regular">
     <p>
     <%= link_to 'Sign in', new_user_session_path, class: 'button transition-link', data: { action: "click->transition#fadeOut" } %>
     </p>
