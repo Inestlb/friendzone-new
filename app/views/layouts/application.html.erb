@@ -20,7 +20,7 @@
     <% unless controller_name == "pages" && action_name == "home" || controller_name == "sessions" || controller_name == "registrations" %>
       <%= render "shared/navbar" %>
     <% end %>
-    <%= render "shared/flashes" %>
+    <%= render "shared/flashes" if controller_name == "events" %>
 
     <%= yield %>
 
