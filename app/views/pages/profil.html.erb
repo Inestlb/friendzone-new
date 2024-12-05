@@ -28,9 +28,9 @@
   <!-- Réponses Section -->
   <%# <h5 class="section-title mt-0">Réponses</h5> %>
   <div class="answers">
-    <%= image_tag "flashcard_mood_#{current_user.mood}", alt: current_user.mood unless current_user.mood.nil? %>
-    <%= image_tag "flashcard_interest_#{current_user.life_choice}", alt: current_user.life_choice unless current_user.life_choice.nil? %>
-    <%= image_tag "flashcard_vacances_#{current_user.vacation}", alt: current_user.vacation %>
+    <%= image_tag "flashcard_mood_#{current_user.mood}.jpg", alt: current_user.mood unless current_user.mood.nil? %>
+    <%= image_tag "flashcard_interest_#{current_user.life_choice}.jpg", alt: current_user.life_choice unless current_user.life_choice.nil? %>
+    <%= image_tag "flashcard_vacances_#{current_user.vacation}.jpg", alt: current_user.vacation %>
   </div>
 
   <!-- Events Section -->
