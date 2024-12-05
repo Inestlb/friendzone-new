@@ -12,7 +12,7 @@
       <div class="conversation-card">
         <!-- Avatar de l'utilisateur matché -->
         <div class="conversation-avatar">
-          <img src="<%= matched_user.avatar_url %>" alt="<%= matched_user.name %>" />
+          <%= image_tag matched_user.avatar_url, alt: matched_user.name %>
         </div>
 
         <!-- Informations principales -->
