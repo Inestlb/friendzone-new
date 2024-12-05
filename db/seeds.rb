@@ -307,6 +307,19 @@ users = [
     life_choice: "famille",
     friends_age: 30,
     friends_distance: 50
+  },
+  {
+    name: "Sarah",
+    email: "sarah@test.test",
+    password: "123456",
+    age: 25,
+    avatar_url: "sarah.jpg",
+    language: ["Indonesian", "French", "English"].join(' '),
+    mood: "drink",
+    vacation: "city",
+    life_choice: "famille",
+    friends_age: 30,
+    friends_distance: 50
   }
   # },
   # {
