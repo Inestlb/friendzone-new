@@ -82,11 +82,11 @@ export default class extends Controller {
   updateUIWithMatch(json) {
     this.modalInstance.show();
     this.modalBodyTarget.innerHTML = `
-      <h5 class="text-center">🎉 Match Réussi ! 🎉</h5>
+      <h5 class="text-center besties">🎉    BESTIES MATCHES    🎉</h5>
       <p>${json.message}</p>
       <div class="d-flex justify-content-end mt-3">
-        <button class="btn btn-primary me-2" onclick="window.location.href='/matches/${json.match_id}'">Discuter</button>
-        <button class="btn btn-secondary" data-bs-dismiss="modal" data-action="click->confetti#stopAnimation">Continuer à matcher</button>
+        <button class="btn btn-primary me-2 btn" onclick="window.location.href='/matches/${json.match_id}'">Discuss</button>
+        <button class="btn btn-secondary btn" data-bs-dismiss="modal" data-action="click->confetti#stopAnimation">Continue to match</button>
       </div>
     `
     document.querySelector(".modal-backdrop").remove()

@@ -12,11 +12,11 @@ class LikesController < ApplicationController
       match = check_for_match(@like) if @like.is_liked
       respond_to do |format|
         if match.class == Match
-          format.json { render(json: { content: "YOUPI", match: match.class == Match, message: "You matched with #{@like.liked.name}!", match_id: match.id }) }
+          format.json { render(json: { content: "YOUPI", match: match.class == Match, message: "You matched with #{@like.liked.name}", match_id: match.id }) }
         else
-          format.json { render(json: { content: "YOUPI", match: match.class == Match, message: "You matched with #{@like.liked.name}!" }) }
+          format.json { render(json: { content: "YOUPI", match: match.class == Match, message: "You matched with #{@like.liked.name}" }) }
         end
-        format.html { redirect_to users_path, status: :see_other, notice: "You matched with #{@like.liked.name}!" }
+        format.html { redirect_to users_path, status: :see_other, notice: "You matched with #{@like.liked.name}" }
       end
     else
       respond_to do |format|

@@ -13,6 +13,22 @@ $green: #B1DA96;
   overflow-x: hidden;
   background-color: #090510;
 
+.btn {
+  background-color: #8576FF;
+  color: white;
+  border-radius: 50px;
+  font-family:"Bebas Neue", sans-serif;
+  letter-spacing: 1px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.besties {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
   &__content {
     user-select: none;
     height: 100vh;
