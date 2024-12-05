@@ -55,4 +55,5 @@
 /* Ajuster l'élément body pour ne pas être masqué par la navbar fixe */
 body {
   margin-top: 80px;  /* Ajustez selon la hauteur de la navbar */
+  overflow-y: auto;
 }

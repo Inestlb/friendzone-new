@@ -10,6 +10,8 @@
   border-radius: 1.5rem;
   padding: 1.4rem;
   padding-bottom: 8.5rem;
+  letter-spacing: 2px;
+
 }
 
 .user-details {
@@ -30,8 +32,9 @@
 .age-language {
   font-size: 14px;
   color: #6af6a2;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
   margin-top: 10px;
+  letter-spacing: 2px;
 }
 
 .stats-container-profil {
@@ -57,7 +60,7 @@
 .stats-item-profil{
   text-align: center;
   flex: 1;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
   background-color: #6af6a2;
   border-radius: 25px;
   margin: 10px;
@@ -75,7 +78,7 @@
   font-weight: bold;
   padding: 2px;
   margin-bottom: 0px !important;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
 }
 
 
@@ -85,7 +88,7 @@
   margin-bottom: 10px;
   color: white;
   letter-spacing: 1px;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
 }
 
 .stats-item small {
@@ -98,7 +101,7 @@
 }
 .section-title {
   font-size: 20px;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
   font-weight: bold;
   text-align: left;
   margin-bottom: 15px;
@@ -128,7 +131,7 @@
 
 .event-item-profil {
   flex: 1;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
   border: solid;
   border-color: #6af6a2;
   border-radius: 25px;
@@ -154,7 +157,7 @@
 .event-text {
   font-size: 16px;
   color: white;
-  font-family: "Inter", sans-serif;
+  font-family: "impact", sans-serif;
   font-weight: bold;
   text-align: center;
   margin: 0;
