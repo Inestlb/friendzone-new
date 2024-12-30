@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def update_life_choice
     @user.update(life_choice_params)
-    redirect_to users_path
+    redirect_to profil_path
     # redirect_to user_path(@user)
   end
 
