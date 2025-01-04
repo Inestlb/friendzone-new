@@ -9,46 +9,45 @@
     </div>
   </div>
 
-  <!-- Stats Section -->
+
   <div class="stats-container-profil">
     <div class="grid-symp">
       <div class="stats-item-profil">
-        <i class="fa-solid fa-cake-candles icone-profil"></i> <p> <%= @user.age%> yrs</p>
+        <i class="fa-solid fa-cake-candles icone-profil"></i><p><%= @user.age%></p>
       </div>
       <div class="stats-item-profil">
-        <i class="fa-solid fa-location-dot icone-profil"></i> <p> Paris</p>
+        <i class="fa-solid fa-location-dot icone-profil"></i><p>Paris</p>
       </div>
   </div>
     <div class="stats-item-profil">
-      <i class="fa-solid fa-comment icone-profil"></i><p> <%= @user.language || "Anglais" %></p>
+      <i class="fa-solid fa-globe"></i><p> <%= @user.language || "Anglais" %></p>
       <%# <small>Langues</small> %>
     </div>
   </div>
 
-  <!-- Réponses Section -->
-  <%# <h5 class="section-title mt-0">Réponses</h5> %>
+
   <div class="answers">
     <%= image_tag "flashcard_mood_#{current_user.mood}.jpg", alt: current_user.mood unless current_user.mood.nil? %>
     <%= image_tag "flashcard_interest_#{current_user.life_choice}.jpg", alt: current_user.life_choice unless current_user.life_choice.nil? %>
     <%= image_tag "flashcard_vacances_#{current_user.vacation}.jpg", alt: current_user.vacation %>
   </div>
 
-  <!-- Events Section -->
-    <div class= "events-title-profile mt-2">
+
+    <div class= "events-title-profile">
       <h5>Events</h5>
     </div>
   <div class="events-container-profil">
     <div class="event-item-profil">
       <div class="event-icon event1"></div>
-      <p class="event-text">Latino Party at Salsero</p>
+      <p class="event-text-profil">Latino Party at Salsero</p>
     </div>
     <div class="event-item-profil">
       <div class="event-icon event2"></div>
-      <p class="event-text">Basketball match</p>
+      <p class="event-text-profil">Basketball match</p>
     </div>
     <div class="event-item-profil">
       <div class="event-icon event3"></div>
-      <p class="event-text">Movie premier at Pathé</p>
+      <p class="event-text-profil">Movie premier at Pathé</p>
     </div>
   </div>
 </div>

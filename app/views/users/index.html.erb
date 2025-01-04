@@ -10,34 +10,33 @@
           <div class="swiper__card__content">
 
             <div class="swiper__card__content_top">
-              <%# La partie du haut de la carte %>
+
             </div>
             <div class="avatar-profil mb-2">
               <%= image_tag user.avatar_url, class: 'swiper__card__img rounded-circle w-100 h-100 object-fit-cover' %>
             </div>
 
-            <!-- Name -->
+
             <div class="name mt-2">
               <h2><%= user.name %></h2>
             </div>
-            <!--info Section -->
+
             <div class="stats-container">
               <div class="grid-symp">
                 <div class="stats-item">
-                  <i class="fa-solid fa-cake-candles"></i><p><%= user.age %> yrs</p>
+                  <i class="fa-solid fa-cake-candles"></i><p><%= user.age %></p>
 
                 </div>
                 <div class="stats-item">
-                  <i class="fa-solid fa-location-dot"></i><p>5 km</p>
+                  <i class="fa-solid fa-location-dot"></i><p>5 KM</p>
                 </div>
               </div>
               <div class="stats-item">
-                <i class="fa-solid fa-comment"></i><p><%= user.language %></p>
-                <%# <small>Langues</small> %>
+                <i class="fa-solid fa-globe"></i><p><%= user.language %></p>
               </div>
             </div>
 
-            <!-- Reponses -->
+
             <section>
               <div class="container swiper-custom-container">
                 <div class="answers">
@@ -48,28 +47,28 @@
                       <%#= cl_image_tag user.mood_image.key, class: "img-fluid", alt: user.mood, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
-                  <!-- Image 2 -->
+
                   <div class="col-12 col-md-3">
                     <div class="">
                       <%= image_tag "flashcard_interest_#{user.life_choice}.jpg", class: "img-fluid", style: "border-radius: 10px; height: 120px; width: 108px", alt: user.life_choice unless user.life_choice.nil? %>
                       <%#= cl_image_tag user.vacation_image.key, class: "img-fluid", alt: user.vacation, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
-                  <!-- Image 3 -->
+
                   <div class="col-12 col-md-3">
                     <div class="">
                       <%= image_tag "flashcard_vacances_#{user.vacation}.jpg", class: "img-fluid", style: "border-radius: 10px; height: 120px; width: 108px", alt: user.vacation unless user.vacation.nil? %>
                       <%#= cl_image_tag user.life_image.key, class: "img-fluid", alt: user.life_choice, style: "border-radius: 10px; height: 180px; width: 108px" %>
                     </div>
                   </div>
-                  <!-- Image 4 -->
+
                 </div>
               </div>
             </section>
 
 
-            <!-- Events -->
-            <div class="events-title mt-2">
+
+            <div class="events-title">
               <h5>Events</h5>
             </div>
             <div class="events-container">
